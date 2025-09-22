@@ -1,0 +1,9 @@
+@import "normalize.css";
+
+html, body {
+  font-family: Inter, Roboto, sans-serif;
+  scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
+}
