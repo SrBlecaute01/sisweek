@@ -1,6 +1,6 @@
 {
   "1": {
-    "day": "Segunda 10/10",
+    "day": "Segunda 22/09",
     "schedules": [
       {
         "title": "Palestra",
@@ -29,19 +29,55 @@
     ]
   },
   "2": {
-    "day": "Terça 11/10",
-    "schedules": []
+    "day": "Terça 23/09",
+    "schedules": [
+      {
+        "title": "Palestra",
+        "speakers": ["Zezinho", "Luizinho"],
+        "time": "18:00h",
+        "duration": "30m",
+        "location": "Cine Penedo",
+        "image": "./../assets/speakers/speaker.png"
+      }
+    ]
   },
   "3": {
-    "day": "Quarta 12/10",
-    "schedules": []
+    "day": "Quarta 24/09",
+    "schedules": [
+      {
+        "title": "Palestra",
+        "speakers": ["Zezinho", "Luizinho"],
+        "time": "18:00h",
+        "duration": "30m",
+        "location": "Cine Penedo",
+        "image": "./../assets/speakers/speaker.png"
+      }
+    ]
   },
   "4": {
-    "day": "Quinta 13/10",
-    "schedules": []
+    "day": "Quinta 25/09",
+    "schedules": [
+      {
+        "title": "Palestra",
+        "speakers": ["Zezinho", "Luizinho"],
+        "time": "18:00h",
+        "duration": "30m",
+        "location": "Cine Penedo",
+        "image": "./../assets/speakers/speaker.png"
+      }
+    ]
   },
   "5": {
-    "day": "Sexta 14/10",
-    "schedules": []
+    "day": "Sexta 26/09",
+    "schedules": [
+      {
+        "title": "Palestra",
+        "speakers": ["Zezinho", "Luizinho"],
+        "time": "18:00h",
+        "duration": "30m",
+        "location": "Cine Penedo",
+        "image": "./../assets/speakers/speaker.png"
+      }
+    ]
   }
 }

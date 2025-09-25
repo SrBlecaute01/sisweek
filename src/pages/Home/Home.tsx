@@ -17,7 +17,15 @@ function Home() {
   const typedLocationsData: LocationsData = locationsData as LocationsData;
 
   useEffect(() => {
-    if (Object.keys(schedules).length > 0) setSelectedSchedule(Object.values(schedules)[0]);
+    if (Object.keys(schedules).length <= 0) return;
+
+    const today = new Date().toLocaleDateString("pt-BR", {day: "2-digit", month: "2-digit"});
+    const found = Object.values(schedules).find(schedule => {
+      const [, date] = schedule.day.split(" ");
+      return date === today;
+    });
+
+    setSelectedSchedule(found || Object.values(schedules)[0]);
   }, [schedules]);
 
   return (
@@ -39,24 +47,31 @@ function Home() {
                     1024: {slidesPerView: 5}
                   }}
               >
-                {Object.values(schedules).map((item) => (
-                    <SwiperSlide className={styles.scheduleDatesSwiperItem}>
-                      <p>{item.day}</p>
-                    </SwiperSlide>
-                ))}
+                {Object.values(schedules).map((item) => {
+                  const selectedClassName = selectedSchedule?.day === item.day ? styles.scheduleSelected : styles.scheduleNonSelected;
+                  return (
+                      <SwiperSlide className={`${styles.scheduleDatesSwiperItem} ${selectedClassName}`}>
+                        <p onClick={() => {setSelectedSchedule(item)}}>
+                          {item.day}
+                        </p>
+                      </SwiperSlide>
+                  );
+                })}
               </Swiper>
             </section>
             <section className={styles.scheduleCardsSection}>
               {selectedSchedule && selectedSchedule.schedules.map((event, index) => (
-                  <EventCard
-                      key={index}
-                      title={event.title}
-                      speakers={event.speakers}
-                      time={event.time}
-                      duration={event.duration}
-                      location={event.location}
-                      image={event.image}
-                  />
+                  <div className={styles.scheduleCardContainer}>
+                    <EventCard
+                        key={index}
+                        title={event.title}
+                        speakers={event.speakers}
+                        time={event.time}
+                        duration={event.duration}
+                        location={event.location}
+                        image={event.image}
+                    />
+                  </div>
               ))}
             </section>
           </section>
