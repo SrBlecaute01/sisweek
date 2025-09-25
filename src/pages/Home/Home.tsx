@@ -1,3 +1,5 @@
+import Navbar from '../../components/Navbar';
+import Banner from '../../components/Banner'
 import styles from './Home.module.css'
 import schedulesData from './../../data/schedule.json'
 import locationsData from './../../data/locations.json'
@@ -20,6 +22,8 @@ function Home() {
 
   return (
       <main className={styles.main}>
+        <Navbar/>
+        <Banner/>
         <section id="schedule" className={styles.scheduleSection}>
           <section className={styles.scheduleContent}>
             <section className={styles.scheduleDatesSection}>
