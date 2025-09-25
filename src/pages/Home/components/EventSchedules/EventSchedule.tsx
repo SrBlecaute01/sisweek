@@ -9,7 +9,7 @@ import {useEffect, useState} from "react";
 import type {LocationsData} from "../../../../types";
 import locationsData from "../../../../data/locations.json";
 
-function EventSchedule() {
+function EventSchedules() {
   const schedules = useSchedules(schedulesData);
   const [selectedSchedule, setSelectedSchedule] = useState<RawDaySchedule | null>(null);
   const typedLocationsData: LocationsData = locationsData as LocationsData;
@@ -83,4 +83,4 @@ function EventSchedule() {
   )
 }
 
-export default EventSchedule;
+export default EventSchedules;

@@ -3,7 +3,9 @@ import Banner from './components/Banner'
 import About from './components/About/About';
 import Guests from './components/Guests/Guests';
 import styles from './Home.module.css'
-import EventSchedule from "./components/EventSchedule";
+import Sponsors from "./components/Sponsors";
+import Awards from "./components/Awards";
+import EventSchedules from "./components/EventSchedules";
 
 function Home() {
   return (
@@ -12,7 +14,9 @@ function Home() {
         <Banner/>
         <About/>
         <Guests/>
-        <EventSchedule/>
+        <Awards/>
+        <EventSchedules/>
+        <Sponsors/>
       </main>
   )
 }

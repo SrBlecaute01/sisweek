@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
+
 .navbar{
     display: flex;
     height: 100px;
@@ -11,25 +12,26 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo{
     display: flex;
     align-items: center;
     justify-content: start;
     margin-left: 70px;
 }
+
 .logo img{
     width: 190px;
     height: 190px;
 }
+
 .link{
     display: flex;
     color: #fff;
     justify-content: end;
     margin-right: 100px;
-   
-    
-    
 }
+
 .link a{
      color: #fff;
      margin-right: 50px;
@@ -38,11 +40,13 @@
      font-weight: bold;
      padding: 7px;
 }
+
 .linkborda {
   border: 2px solid #fff; 
   padding: 7px;        
   border-radius: 8px;    
 }
+
 .icon{
     margin-top: 4px;
     margin-left: 20px;
