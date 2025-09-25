@@ -4,8 +4,6 @@ interface CardProps{
   name: string;
   desc: string;
   image: string;
-  // desnecesário, só colocar "Foto de {name}"
-  // alt_text: string;
 }
 
 export default function CardGuest(props: CardProps){
