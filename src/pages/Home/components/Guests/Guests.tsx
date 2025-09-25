@@ -1,7 +1,7 @@
-import CardGuest from '../CardGuest/CardGuest';
+import CardGuest from '../CardGuest/CardGuest.tsx';
 import styles from './Guests.module.css';
 
-const guest_images = Object.values(import.meta.glob('../../assets/guests/*.{png,jpg,jpeg,svg}', { eager: true })) as { default: string }[];
+const guest_images = Object.values(import.meta.glob('../../../../assets/guests/*.{png,jpg,jpeg,svg}', { eager: true })) as { default: string }[];
 
 const guest_list = [
   {

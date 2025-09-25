@@ -1,5 +1,5 @@
 import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
-import type {MarkerData} from "../../types";
+import type {MarkerData} from "../../../../types";
 
 interface EventMapProps {
   center: [number, number];

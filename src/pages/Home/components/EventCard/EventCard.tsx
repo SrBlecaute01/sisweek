@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from './EventCard.module.css';
-import TimeIcon from './../../assets/icons/time.svg?react';
-import ScheduleIcon from './../../assets/icons/schedule.svg?react';
-import ArrowRight from './../../assets/icons/keyboard_arrow_up.svg?react';
+import TimeIcon from '../../../../assets/icons/time.svg?react';
+import ScheduleIcon from '../../../../assets/icons/schedule.svg?react';
+import ArrowRight from '../../../../assets/icons/keyboard_arrow_up.svg?react';
 
 interface EventCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

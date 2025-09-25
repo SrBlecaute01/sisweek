@@ -1,5 +1,5 @@
 import styles from './Banner.module.css'
-import tec from "../../assets/tec.png"
+import tec from "../../../../assets/tec.png"
 ('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
