@@ -16,78 +16,88 @@ export default function About(){
     {
       src: 'https://placehold.co/300/f6a938/FFFFFF/?text=3',
       alt: '[PH] Text'
+    },
+    {
+      src: 'https://placehold.co/400x1000/FFFFFF/694737/?text=4',
+      alt: '[PH] Text'
+    },
+    {
+      src: 'https://placehold.co/200x400/FFFFFF/53b5f7/?text=5',
+      alt: '[PH] Text'
+    },
+    {
+      src: 'https://placehold.co/300/FFFFFF/f6a938/?text=6',
+      alt: '[PH] Text'
     }
   ];
 
 // fazer virar componente separado depois, passando classNames via props
-
-  const [fadeStage, setFadeStage] = React.useState(0); // should go from 0 to 2
-  const [shouldFade, setShouldFade] = React.useState([styles.fade_in, styles.fade_out, styles.fade_out]); //length always 3
+const [fadeStage, setFadeStage] = React.useState(0); // should go from 0 to 2
+const [shouldFade, setShouldFade] = React.useState([true, false, false]); //length always 3
+const [nextIndex, setNextIndex] = React.useState(1)
   const [swapImageIndexes,setSwapImageIndexes] = React.useState([0,1,1]); //length always 3
 
   React.useEffect(() => {
-    const interval = setInterval(() => {
-      console.log(fadeStage);
-      console.log(shouldFade);
-      console.log(swapImageIndexes);
-      switch(fadeStage){
-        case 0:
-          setShouldFade([styles.fade_in, styles.fade_out, styles.fade_out]);
-          setSwapImageIndexes([
-            swapImageIndexes[0],
-            swapImageIndexes[1],
-            (swapImageIndexes[2] + 1) % images.length
-          ]);
-          break;
-        case 1:
-          setShouldFade([styles.fade_out, styles.fade_in, styles.fade_out]);
-          setSwapImageIndexes([
-            (swapImageIndexes[0] + 1) % images.length,
-            swapImageIndexes[1],
-            swapImageIndexes[2]
-          ]);
-          break;
-        case 2:
-          setShouldFade([styles.fade_out, styles.fade_out, styles.fade_in]);
-          setSwapImageIndexes([
-            swapImageIndexes[0],
-            (swapImageIndexes[1] + 1) % images.length,
-            swapImageIndexes[2]
-          ]);
-          break;
+    setTimeout(()=>{
+      //console.log('Fade stage: ' + fadeStage);
+      //console.log('Should fade: ' + shouldFade);
+      //console.log('Swap Image Indexes: ' + swapImageIndexes);
+      if(fadeStage == 0){
+        setShouldFade([false, true, false]);
+        setSwapImageIndexes([
+          swapImageIndexes[0],
+          swapImageIndexes[1],
+          (nextIndex + 1) % images.length
+        ]);
       }
-      const nextFadeStage = (fadeStage+1) % 3;
-      console.log(nextFadeStage);
-      setFadeStage(1);
-      console.log(fadeStage);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
+      else if(fadeStage == 1){
+        setShouldFade([false, false, true]);
+        setSwapImageIndexes([
+          (nextIndex + 1) % images.length,
+          swapImageIndexes[1],
+          swapImageIndexes[2]
+        ]);
+      }
+      else if(fadeStage == 2){
+        setShouldFade([true, false, false]);
+        setSwapImageIndexes([
+          swapImageIndexes[0],
+          (nextIndex + 1) % images.length,
+          swapImageIndexes[2]
+        ]);
+      }
+    const nextFadeStage = (fadeStage+1) % 3;
+    //console.log('nextFadeStage: ' + nextFadeStage);
+    setFadeStage(nextFadeStage);
+    setNextIndex((nextIndex + 1) % images.length)
+    //console.log('___________________')
+    },6000);
+  }, [shouldFade, swapImageIndexes, fadeStage]);
 
   return(
     <>
       <div className={styles.about_container}>
         <div className={styles.text_container}>
-          <span>Sisweek 2025</span>
-          <h1>SOBRE O EVENTO</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel metus diam. Sed eget lobortis augue. Quisque faucibus lorem nec posuere vehicula. Phasellus ut risus ut nulla mollis bibendum. Aenean consequat felis augue, non pharetra dolor blandit sit amet. Curabitur pellentesque tristique nulla, vel tincidunt risus tristique sit amet. Maecenas ipsum ante, molestie lobortis enim et, consequat pretium ligula. Pellentesque luctus tortor mi. Ut cursus sed arcu id rhoncus. Etiam diam diam, suscipit ac ligula vel, feugiat scelerisque dui. Nullam auctor, ex eget gravida efficitur, nisi nisl elementum nibh, non pharetra enim ex non nunc. Nunc feugiat lectus ut neque faucibus suscipit. Mauris quis massa pretium, luctus quam et, pulvinar lectus. Morbi sed gravida urna, ac sodales nisi. Vivamus vitae libero nec magna sagittis viverra. Proin lacinia erat et nulla imperdiet efficitur.</p>
+          <span className={styles.about_sisweek}>Sisweek 2025</span>
+          <h1 className={styles.about_h1}>SOBRE O EVENTO</h1>
+          <p className={styles.about_p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
+
         <div className={styles.anim_container}>
           <div className={styles.img_container}>
             <img
               src={images[swapImageIndexes[0]].src}
-              className={styles.image + ' ' + shouldFade[0]}
+              className={styles.image + ' ' + (shouldFade[0] ? styles.fade_in: styles.fade_out)}
               alt={images[swapImageIndexes[0]].alt}
             />
             <img
               src={images[swapImageIndexes[1]].src}
-              className={styles.image + ' ' + shouldFade[1]}
+              className={styles.image + ' ' + (shouldFade[1] ? styles.fade_in: styles.fade_out)}
               alt={images[swapImageIndexes[1]].alt}
             />
             <img
               src={images[swapImageIndexes[2]].src}
-              className={styles.image + ' ' + shouldFade[2]}
+              className={styles.image + ' ' + (shouldFade[2] ? styles.fade_in: styles.fade_out)}
               alt={images[swapImageIndexes[2]].alt}
             />
           </div>
