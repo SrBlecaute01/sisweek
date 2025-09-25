@@ -1,5 +1,9 @@
 @import "normalize.css";
 
+:root {
+  --navbar-height: 100px
+}
+
 html, body {
   font-family: Inter, Roboto, sans-serif;
   scroll-behavior: smooth;
