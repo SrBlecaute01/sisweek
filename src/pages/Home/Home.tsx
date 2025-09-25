@@ -1,5 +1,7 @@
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/Banner'
+import About from '../../components/About/About';
+import Guests from '../../components/Guests/Guests';
 import styles from './Home.module.css'
 import schedulesData from './../../data/schedule.json'
 import locationsData from './../../data/locations.json'
@@ -32,6 +34,8 @@ function Home() {
       <main className={styles.main}>
         <Navbar/>
         <Banner/>
+        <About/>
+        <Guests/>
         <section id="schedule" className={styles.scheduleSection}>
           <section className={styles.scheduleContent}>
             <section className={styles.scheduleDatesSection}>
