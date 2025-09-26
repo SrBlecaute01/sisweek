@@ -1,0 +1,125 @@
+.eventCardContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 120px;
+
+    border-radius: 10px;
+    background: #DEDEDE;
+    box-sizing: border-box;
+
+    padding: 0 20px 0 20px;
+}
+
+.eventInfo {
+    display: flex;
+    align-items: center;
+}
+
+.eventImageWrapper {
+    margin-right: 20px;
+}
+
+.eventImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.eventDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.eventTitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.eventSpeakers {
+    gap: 15px;
+    display: flex;
+}
+
+.speakerName {
+    color: #0057FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.eventMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.eventMetaItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eventTimeItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.eventLocation {
+    font-weight: bold;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.arrowIcon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 576px) {
+    .eventCardContainer {
+        padding: 0 10px 0 10px;
+    }
+
+    .eventTitle {
+        font-size: 12px;
+    }
+
+    .speakerName {
+        font-size: 12px;
+    }
+
+    .eventSpeakers {
+        gap: 10px;
+    }
+
+    .eventLocation {
+        font-size: 12px;
+    }
+
+    .eventTimeItem {
+        gap: 5px;
+        font-size: 12px;
+    }
+}

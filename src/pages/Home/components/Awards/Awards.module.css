@@ -1,0 +1,43 @@
+.awards {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.awardsTitle h2 {
+    color: rgb(10, 10, 10);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.awardsCards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.card img {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    object-fit: contain;
+}
+
+.card .altText {
+    font-size: 0.8rem;
+    font-weight: normal;
+}

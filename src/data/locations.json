@@ -1,0 +1,18 @@
+{
+  "center": [-10.28953547, -36.58427489],
+  "zoom": 18,
+  "markers": [
+    {
+      "position": [-10.290784, -36.585444],
+      "popupText": "OxeTech Lab"
+    },
+    {
+      "position": [-10.2901698, -36.5856877],
+      "popupText": "Centro de Conveções"
+    },
+    {
+      "position": [-10.2883105, -36.5829250],
+      "popupText": "Cine Penedo"
+    }
+  ]
+}

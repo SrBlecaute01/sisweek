@@ -6,7 +6,6 @@
   background: linear-gradient(133.91deg, #33C9FF -7.59%, #1C2190 41.03%, #080A2A 81.9%);
 
   color: white;
-
 }
 
 .title{
@@ -16,8 +15,8 @@
 
   text-align: center;
 
+  font-style: normal;
   font-weight: 700;
-  font-style: Bold;
   font-size: 36px;
   letter-spacing: -0.43px;
 }
