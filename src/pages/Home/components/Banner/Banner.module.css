@@ -1,54 +1,116 @@
-.banner {
+.container {
+    width: 100%;
+    height: 670px;
+
+    max-height: calc(100vh - var(--navbar-height));
+
     display: flex;
-    background-image: url('../../../../assets/image.png');
+    margin-top: var(--navbar-height);
+
+    background-image: url('../../../../assets/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 670px;
-    margin-top: var(--navbar-height);
 }
 
-.titulobanner {
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    margin-top: 150px;
-    margin-left: 50px;
-}
+.content {
+    height: 100%;
 
-.subtitulo {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 2px;
-    margin-right: 37px;
-    padding: 5px;
-}
-
-.titulo {
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 5px;
-}
-
-.destaque {
-    font-size: 75px;
-    font-weight: 900;
-}
-
-.tec {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 225px;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+
+    margin-left: 7%;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    color: #FFFFFF;
+    font-family: Saira, Inter, sans-serif;
+
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
 }
 
-.tec {
-    width: 130px;
-    height: 130px;
+.date {
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Saira, Inter, sans-serif;
+
+    hr {
+        flex: 1;
+        height: 1px;
+        background: #FFFFFF;
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+}
+
+.text {
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.highlight {
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+    .container {
+        background-position: 65% 20%;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .text {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .highlight {
+        font-size: 41px;
+        font-style: normal;
+        font-weight: 800;
+    }
+
+    .icon {
+        width: 15%;
+    }
+
+    .date {
+        font-size: 12px;
+    }
 }

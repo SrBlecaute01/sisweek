@@ -1,5 +1,5 @@
 :root {
-    --navbar-height: 100px;
+    --navbar-height: 85px;
 }
 
 .container {
@@ -43,7 +43,6 @@
     justify-content: flex-end;
 
     gap: 50px;
-    cursor: pointer;
 
     color: #FFFFFF;
     font-size: 18px;
@@ -60,7 +59,7 @@
     }
 
     :last-child {
-        padding: 14px 20px;
+        padding: 8px 20px;
 
         border: 1px solid #FFF;
         border-radius: 12px;
