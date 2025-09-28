@@ -31,28 +31,36 @@ function EventSchedules() {
         <section className={styles.scheduleContent}>
           <section className={styles.scheduleDatesSection}>
             <h1>PROGRAMAÇÃO</h1>
-            <Swiper
-                modules={[Navigation]}
-                navigation={true}
-                pagination={{clickable: true}}
-                className={styles.scheduleDatesSwiper}
-                breakpoints={{
-                  320: {slidesPerView: 1},
-                  640: {slidesPerView: 3,},
-                  1024: {slidesPerView: 5}
-                }}
-            >
-              {Object.values(schedules).map((item) => {
-                const selectedClassName = selectedSchedule?.day === item.day ? styles.scheduleSelected : styles.scheduleNonSelected;
-                return (
-                    <SwiperSlide className={`${styles.scheduleDatesSwiperItem} ${selectedClassName}`}>
-                      <p onClick={() => {setSelectedSchedule(item)}}>
-                        {item.day}
-                      </p>
-                    </SwiperSlide>
-                );
-              })}
-            </Swiper>
+            {selectedSchedule && (
+                <Swiper
+                    modules={[Navigation]}
+                    navigation={true}
+                    pagination={{clickable: true}}
+                    className={styles.scheduleDatesSwiper}
+                    initialSlide={Object.values(schedules).findIndex(item => item.day === selectedSchedule.day)}
+                    onSlideChange={swiper => {
+                      const index = swiper.activeIndex;
+                      const items = Object.values(schedules);
+                      setSelectedSchedule(items[index]);
+                    }}
+                    breakpoints={{
+                      320: { slidesPerView: 1 },
+                      640: { slidesPerView: 3 },
+                      1024: { slidesPerView: 5 }
+                    }}
+                >
+                  {Object.values(schedules).map((item) => {
+                    const selectedClassName = selectedSchedule.day === item.day ? styles.scheduleSelected : styles.scheduleNonSelected;
+                    return (
+                        <SwiperSlide className={`${styles.scheduleDatesSwiperItem} ${selectedClassName}`}>
+                          <p onClick={() => {setSelectedSchedule(item)}}>
+                            {item.day}
+                          </p>
+                        </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+            )}
           </section>
           <section className={styles.scheduleCardsSection}>
             {selectedSchedule && selectedSchedule.schedules.map((event, index) => (
