@@ -1,7 +1,7 @@
 import styles from './Navbar.module.css'
 import {FaInstagram} from "react-icons/fa";
 import Logo from "../../assets/logo/logo.svg?react"
-import {Link, animateScroll as scroll} from 'react-scroll';
+import {animateScroll as scroll, Link} from 'react-scroll';
 import {useState} from "react";
 import {FiMenu} from "react-icons/fi";
 import {IoMdClose} from "react-icons/io";
@@ -62,7 +62,7 @@ function Navbar() {
                         smooth={true}
                         duration={500}
                         className={styles.route}
-                        offset={-98}
+                        offset={-getNavbarHeight()}
                         onClick={() => isOpen && toggleMenu()}
                     >
                       {item.text}
@@ -81,6 +81,11 @@ function Navbar() {
         </div>
       </nav>
   )
+}
+
+function getNavbarHeight(): number {
+  const property = getComputedStyle(document.documentElement).getPropertyValue('--navbar-height');
+  return parseInt(property.trim().replace("px", ""));
 }
 
 export default Navbar;
