@@ -75,7 +75,7 @@ const [nextIndex, setNextIndex] = React.useState(1)
   }, [shouldFade, swapImageIndexes, fadeStage]);
 
   return(
-    <>
+    <section id="about">
       <div className={styles.about_container}>
         <div className={styles.text_container}>
           <span className={styles.about_sisweek}>Sisweek 2025</span>
@@ -103,6 +103,6 @@ const [nextIndex, setNextIndex] = React.useState(1)
           </div>
         </div>
       </div>
-    </>
+    </section>
   )
 }

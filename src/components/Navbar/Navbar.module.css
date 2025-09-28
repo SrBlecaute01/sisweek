@@ -1,57 +1,191 @@
+:root {
+    --navbar-height: 100px;
+}
+
 .container {
     display: block;
     position: fixed;
-    z-index: 1000;
-
-    top: 0;
-    width: 100%;
-    max-height: 100px;
-
-    background: linear-gradient(270deg, #33C9FF -63.56%, #1C2190 9.7%, #080A2A 71.28%);
 
     align-items: center;
+    justify-items: center;
+
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100%;
+    max-height: var(--navbar-height);
+
+    background: var(--background-gradient);
 }
 
 .content {
-    width: 100%;
+    width: 80%;
     height: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    box-sizing: border-box;
+
+    gap: 50px;
 }
 
 .logo {
+    height: 85%;
+    width: auto;
+    cursor: pointer;
+}
+
+.routes {
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: start;
-    margin-left: 70px;
-}
+    justify-content: flex-end;
 
-.link {
-    display: flex;
-    color: #fff;
-    justify-content: end;
-    margin-right: 100px;
-}
+    gap: 50px;
+    cursor: pointer;
 
-.link a {
-    color: #fff;
-    margin-right: 50px;
-    text-decoration: none;
+    color: #FFFFFF;
     font-size: 18px;
-    font-weight: bold;
-    padding: 7px;
-}
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 
-.linkborda {
-    border: 2px solid #fff;
-    padding: 7px;
-    border-radius: 8px;
+    .route {
+        cursor: pointer;
+    }
+
+    :hover {
+        color: var(--secundary-blue);
+    }
+
+    :last-child {
+        padding: 14px 20px;
+
+        border: 1px solid #FFF;
+        border-radius: 12px;
+
+        &:hover {
+            color: #FFFFFF !important;
+            font-weight: bold;
+
+            border: 1px solid var(--secundary-blue);
+            background-color: var(--secundary-blue);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+            transform: scale(1.08);
+            transition: transform 0.2s;
+        }
+    }
 }
 
 .icon {
-    margin-top: 4px;
-    margin-left: 20px;
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
 
+    &:hover {
+        transform: scale(1.4);
+        transition: transform 0.3s;
+    }
+}
+
+.menuIcon {
+    display: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    z-index: 2000;
+}
+
+@media only screen and (max-width: 1023px) {
+    .content {
+        gap: normal;
+    }
+
+    .routes {
+        width: 250px;
+
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        top: 0;
+        right: 0;
+        height: 100vh;
+        z-index: 1001;
+
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px #0006;
+
+        background: var(--background-gradient);
+        text-transform: uppercase;
+
+        transform: translate(250px);
+        transition: .2s transform;
+
+        &.open {
+            transform: translate(0);
+        }
+
+        :last-child {
+            border: none;
+            border-radius: 0;
+            padding: 0 0 0 20px;
+
+            &:hover {
+                color: var(--secundary-blue) !important;
+                border: none !important;
+                background: none !important;
+                box-shadow: none !important;
+                font-weight: inherit !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    }
+
+    .route {
+        width: 100%;
+        height: 50px;
+        padding-left: 20px;
+
+        :first-child {
+            display: flex;
+            align-self: flex-end;
+        }
+    }
+
+    .close {
+        width: 100%;
+        height: var(--navbar-height);
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .closeIcon {
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        position: absolute;
+        right: 40px;
+    }
 }

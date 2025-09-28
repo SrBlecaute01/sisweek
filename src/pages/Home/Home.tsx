@@ -11,12 +11,12 @@ function Home() {
   return (
       <main className={styles.main}>
         <Navbar/>
-        <Banner/>
+{/*        <Banner/>
         <About/>
         <Guests/>
         <Awards/>
         <EventSchedules/>
-        <Sponsors/>
+        <Sponsors/>*/}
       </main>
   )
 }
