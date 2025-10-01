@@ -3,9 +3,9 @@
     height: 670px;
 
     max-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
 
     display: flex;
-    margin-top: var(--navbar-height);
 
     background-image: url('../../../../assets/banner.png');
     background-repeat: no-repeat;

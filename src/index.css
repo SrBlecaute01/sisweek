@@ -7,7 +7,7 @@
   --background-gradient: linear-gradient(270deg, #33C9FF -63.56%, #1C2190 9.7%, #080A2A 71.28%);
 }
 
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
 

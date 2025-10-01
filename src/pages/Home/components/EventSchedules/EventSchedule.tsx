@@ -78,7 +78,7 @@ function EventSchedules() {
             ))}
           </section>
         </section>
-        <section className={styles.scheduleMapsSection}>
+        <section id="maps" className={styles.scheduleMapsSection}>
           <h1>MAPA DO EVENTO</h1>
           <EventMap
               center={typedLocationsData.center}

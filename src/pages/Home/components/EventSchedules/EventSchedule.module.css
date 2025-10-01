@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
 
     background: linear-gradient(332deg, #33C9FF 1.1%, #1C2190 46.84%, #080A2A 85.29%);
 
@@ -114,10 +113,13 @@
 }
 
 .scheduleMapsSection {
-    width: 100%;
-    height: 675px;
+    width: 90vw;
+    height: 70vh;
 
     max-width: 1200px;
+    max-height: 675px;
+
+    padding-top: 100px;
 
     display: flex;
     flex-direction: column;
