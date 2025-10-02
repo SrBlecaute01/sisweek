@@ -1,0 +1,101 @@
+.foot_cont{
+  width: 100%;
+  height: auto;
+  background: #0D0E33;
+  
+  color: #D4DCFF
+}
+
+.content_cont{
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left_col{
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.logo_sw{
+  width: 150px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.foot_about{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.57px;
+  color: #D4DCFF;
+}
+
+.foot_social, .foot_makers{
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 0.57px;
+}
+
+.foot_instagram{
+  color: inherit;
+  width: 20px;
+  height: 20px;
+}
+
+.right_col{
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.foot_right_imgs{
+  display: flex;
+  align-items: center;
+}
+
+.logo_ufal{
+  margin-left: -10px;
+  margin-top: -1.5px;
+  width: 71px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo_course{
+  width: 116px;
+  height: 47px;
+  object-fit: contain;
+}
+
+.ace2025{
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  
+  text-align: center;
+
+  color: #FFFFFF;
+  
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 0.57px;
+
+  border-top: #1A1C5D;
+  border-top-style: solid;
+}
+
+@media only screen and (max-width: 470px) {
+  .content_cont{
+    flex-direction: column;
+    align-items: baseline;
+    width: 80%;
+    padding: 20px 10%;
+  }
+}
