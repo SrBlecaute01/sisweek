@@ -8,6 +8,7 @@ import Awards from "./components/Awards";
 import EventSchedules from "./components/EventSchedules";
 import RegistrationForm from "./components/RegistrationForm";
 import {Bounce, ToastContainer} from "react-toastify";
+import Footer from '../../components/Footer';
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ function Home() {
             theme="dark"
             transition={Bounce}
         />
+        <Footer/>
       </main>
   )
 }
