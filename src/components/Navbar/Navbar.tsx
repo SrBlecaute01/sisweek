@@ -23,6 +23,11 @@ const links = [
     onlyMobile: true
   },
   {
+    to: "sponsors",
+    text: "PATROCINADORES",
+    onlyMobile: true
+  },
+  {
     to: "subscription",
     text: "INSCREVA-SE",
     onlyMobile: false
