@@ -28,7 +28,7 @@ const links = [
     onlyMobile: true
   },
   {
-    to: "subscription",
+    to: "registration",
     text: "INSCREVA-SE",
     onlyMobile: false
   }

@@ -6,6 +6,8 @@ import styles from './Home.module.css'
 import Sponsors from "./components/Sponsors";
 import Awards from "./components/Awards";
 import EventSchedules from "./components/EventSchedules";
+import RegistrationForm from "./components/RegistrationForm";
+import {Bounce, ToastContainer} from "react-toastify";
 
 function Home() {
   return (
@@ -17,6 +19,20 @@ function Home() {
         <Awards/>
         <EventSchedules/>
         <Sponsors/>
+        <RegistrationForm/>
+        <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Bounce}
+        />
       </main>
   )
 }
