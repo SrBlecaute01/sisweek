@@ -3,16 +3,15 @@ import type {MarkerData} from "../../../../types";
 
 interface EventMapProps {
   center: [number, number];
-  zoom: number;
   markers: MarkerData[];
   className?: string;
 }
 
-function EventMap({center, zoom, markers, className}: EventMapProps) {
+function EventMap({center, markers, className}: EventMapProps) {
   return (
       <MapContainer
           center={center}
-          zoom={zoom}
+          zoom={window.innerWidth < 768 ? 17 : 18}
           minZoom={0}
           maxZoom={25}
           className={className || ""}

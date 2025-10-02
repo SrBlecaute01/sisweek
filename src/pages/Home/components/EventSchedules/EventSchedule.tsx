@@ -82,7 +82,6 @@ function EventSchedules() {
           <h1>MAPA DO EVENTO</h1>
           <EventMap
               center={typedLocationsData.center}
-              zoom={typedLocationsData.zoom}
               markers={typedLocationsData.markers}
               className={styles.scheduleMaps}
           />

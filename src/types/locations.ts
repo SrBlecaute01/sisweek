@@ -5,6 +5,5 @@ export interface MarkerData {
 
 export interface LocationsData {
   center: [number, number];
-  zoom: number;
   markers: MarkerData[];
 }
