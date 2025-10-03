@@ -2,7 +2,7 @@ import styles from './RegistrationForm.module.css';
 import {useForm} from "react-hook-form";
 import {zodResolver} from '@hookform/resolvers/zod';
 import {type RegistrationFormData, registrationSchema} from "../../../../schemas";
-import {Bounce, toast} from "react-toastify";
+import {toast} from "react-toastify";
 
 function RegistrationForm() {
   const {
@@ -24,6 +24,7 @@ function RegistrationForm() {
   const nameValue = watch('name');
   const emailValue = watch('email');
   const passwordValue = watch('password');
+  const confirmPasswordValue = watch("confirmPassword");
 
   const onSubmit = async (data: RegistrationFormData) => {
     console.log('Valid Data Submitted:', data);
@@ -31,19 +32,9 @@ function RegistrationForm() {
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      toast.success('Inscrição realizada com sucesso!', {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-      });
-
+      toast.success(<p>Inscrição realizada com sucesso!</p>);
       reset();
+
     } catch (error) {
       console.error("Error submitting the form", error);
       alert("An error occurred while processing your registration.");
@@ -93,6 +84,18 @@ function RegistrationForm() {
               />
               {errors.password && passwordValue != '' && (
                   <p className={styles.formError}>{errors.password.message}</p>)}
+            </div>
+
+            <div className={styles.formField}>
+              <label htmlFor="confirmPassword">Confirmar Senha</label>
+              <input
+                  id="confirmPassword"
+                  type="password"
+                  className={styles.formInput}
+                  {...register("confirmPassword")}
+              />
+              {errors.confirmPassword && confirmPasswordValue !== '' && (
+                  <p className={styles.formError}>{errors.confirmPassword.message}</p>)}
             </div>
 
             <button
