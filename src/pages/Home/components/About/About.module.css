@@ -49,28 +49,6 @@
   height: 300px;
 }
 
-.img_container{
-  width: 400px;
-  height: 300px;
-}
-
-.image{
-  position: absolute;
-  width: 400px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.fade_in{
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade_out{
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
 @media only screen and (max-width: 768px) {
   .about_container{
     flex-direction: column;
@@ -80,7 +58,7 @@
     max-width: 80%;
     margin-bottom: 0;
   }
-  .anim_container, .img_container, .image{
+  .anim_container{
     max-width: 80%;
   }
 }

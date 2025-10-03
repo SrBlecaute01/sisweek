@@ -1,0 +1,43 @@
+.img_container{
+  position: relative;
+  width: 400px;
+  height: 320px;
+}
+
+.image{
+  position: absolute;
+  object-fit: cover;
+}
+
+.top_left{
+  top: 0px;
+  left: 0px;
+  width: 160px;
+  height: 160px;
+  z-index: 0;
+  transition: all 1s ease-in-out;
+}
+.top_right{
+  top: 0px;
+  left: 240px;
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+}
+.bottom_mid{
+  top: 80px;
+  left: 80px;
+  width: 240px;
+  height: 240px;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+}
+
+.fade_in{
+  opacity: 1;
+}
+
+.fade_out{
+  opacity: 0.5;
+}
