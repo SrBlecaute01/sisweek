@@ -1,7 +1,7 @@
 - pipeline: deploy-to-production
   name: Deploy to Production
   refs:
-  - refs/heads/main
+  - :default
   events:
   - type: WEBHOOK
   fail_on_prepare_env_warning: true
