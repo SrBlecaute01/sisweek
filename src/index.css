@@ -6,7 +6,7 @@
 
   --background-gradient: linear-gradient(270deg, #33C9FF -63.56%, #1C2190 9.7%, #080A2A 71.28%);
 
-  --toastify-toast-width: 450px
+  --toastify-toast-width: 500px !important;
 }
 
 html, body, #root {

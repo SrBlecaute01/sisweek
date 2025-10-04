@@ -3,6 +3,10 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from '@hookform/resolvers/zod';
 import {type RegistrationFormData, registrationSchema} from "../../../../schemas";
 import {toast} from "react-toastify";
+import {BaseApiError} from "../../../../services";
+import {HttpStatusCode} from "axios";
+import {authService, type RegisterUserRequest} from "../../../../services/auth";
+import {createToast} from "../../../../utils";
 
 function RegistrationForm() {
   const {
@@ -26,20 +30,39 @@ function RegistrationForm() {
   const passwordValue = watch('password');
   const confirmPasswordValue = watch("confirmPassword");
 
-  const onSubmit = async (data: RegistrationFormData) => {
-    console.log('Valid Data Submitted:', data);
-
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      toast.success(<p>Inscrição realizada com sucesso!</p>);
-      reset();
-
-    } catch (error) {
-      console.error("Error submitting the form", error);
-      alert("An error occurred while processing your registration.");
+  function onSubmit(formData: RegistrationFormData) {
+    const request: RegisterUserRequest = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password
     }
-  };
+
+    const toastId = createToast(<p>"Realizando inscrição...</p>);
+
+    authService.registerUser(request)
+        .then(() => {
+          toast.update(toastId, {
+            render: <p>Inscrição realizada com sucesso!</p>,
+            type: "success",
+            isLoading: false,
+            autoClose: 5000,
+          });
+          reset();
+        })
+        .catch((error) => {
+          let message = "Ocorreu um erro inesperado ao tentar realizar a sua inscrição. Por favor, tente novamente mais tarde";
+          if (error instanceof BaseApiError && error.statusCode === HttpStatusCode.BadRequest) {
+            message = "A inscrição para esse e-mail já foi realizada!";
+          }
+
+          toast.update(toastId, {
+            render: <p>{message}</p>,
+            type: "error",
+            isLoading: false,
+            autoClose: 5000,
+          });
+        });
+  }
 
   return (
       <section id="registration" className={styles.formSection}>

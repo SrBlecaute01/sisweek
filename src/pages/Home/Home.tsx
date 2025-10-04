@@ -28,12 +28,11 @@ function Home() {
             newestOnTop={false}
             closeOnClick={false}
             rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
+            pauseOnFocusLoss={true}
+            draggable={true}
+            pauseOnHover={true}
             theme="dark"
-            transition={Bounce}
-        />
+            transition={Bounce}/>
         <Footer/>
       </main>
   )
