@@ -8,7 +8,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       },
       {
         "title": "Palestra",
@@ -16,7 +16,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       },
       {
         "title": "Palestra",
@@ -24,7 +24,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       }
     ]
   },
@@ -37,7 +37,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       }
     ]
   },
@@ -50,7 +50,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       }
     ]
   },
@@ -63,7 +63,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       }
     ]
   },
@@ -76,7 +76,7 @@
         "time": "18:00h",
         "duration": "30m",
         "location": "Cine Penedo",
-        "image": "./../assets/speakers/speaker.png"
+        "image": "speaker.png"
       }
     ]
   }

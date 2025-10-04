@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
-import {getImageUrl} from "../utils";
+
+const images = import.meta.glob('../assets/speakers/*', { eager: true, query: '?url', import: 'default' });
 
 export interface RawEvent {
   title: string;
@@ -44,3 +45,7 @@ export const useSchedules = (scheduleData: ScheduleData) => {
 
   return schedules;
 };
+
+function getImageUrl(imageName: string): string {
+  return images[`../assets/speakers/${imageName}`] as string;
+}
