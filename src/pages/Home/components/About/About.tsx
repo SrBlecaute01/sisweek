@@ -1,4 +1,4 @@
-import ImageTriangleSwapper from '../../../../components/ImageTriangleSwapper/ImageTriangleSwapper';
+import ImageTriangleSwapper from '../ImageTriangleSwapper/ImageTriangleSwapper';
 import styles from './About.module.css';
 
 export default function About(){

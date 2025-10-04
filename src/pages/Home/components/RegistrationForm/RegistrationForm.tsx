@@ -5,10 +5,13 @@ import {type RegistrationFormData, registrationSchema} from "../../../../schemas
 import {toast} from "react-toastify";
 import {BaseApiError} from "../../../../services";
 import {HttpStatusCode} from "axios";
-import {authService, type RegisterUserRequest} from "../../../../services/auth";
-import {createToast} from "../../../../utils";
+import {type RegisterUserRequest} from "../../../../services/auth";
+import {createToast, scrollTo} from "../../../../utils";
+import {useAuth} from "../../../../hooks";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 function RegistrationForm() {
+  const { user, authenticated, register: registerUser, logout } = useAuth();
   const {
     register,
     handleSubmit,
@@ -30,7 +33,7 @@ function RegistrationForm() {
   const passwordValue = watch('password');
   const confirmPasswordValue = watch("confirmPassword");
 
-  function onSubmit(formData: RegistrationFormData) {
+  const onSubmit = (formData: RegistrationFormData) => {
     const request: RegisterUserRequest = {
       name: formData.name,
       email: formData.email,
@@ -38,8 +41,7 @@ function RegistrationForm() {
     }
 
     const toastId = createToast(<p>"Realizando inscrição...</p>);
-
-    authService.registerUser(request)
+    registerUser(request)
         .then(() => {
           toast.update(toastId, {
             render: <p>Inscrição realizada com sucesso!</p>,
@@ -48,6 +50,7 @@ function RegistrationForm() {
             autoClose: 5000,
           });
           reset();
+          scrollTo('registration')
         })
         .catch((error) => {
           let message = "Ocorreu um erro inesperado ao tentar realizar a sua inscrição. Por favor, tente novamente mais tarde";
@@ -67,67 +70,90 @@ function RegistrationForm() {
   return (
       <section id="registration" className={styles.formSection}>
         <div className={styles.formContent}>
-          <div className={styles.formTitle}>
-            <h1>PARTICIPE CONOSCO</h1>
-            <h1>INSCREVA-SE!</h1>
-          </div>
+          { authenticated ? (
+              <>
+                <div className={styles.formTitle}>
+                  <h1>OBRIGADO, {user?.name?.split(" ")[0]?.toUpperCase()}!</h1>
+                  <h1>PELA SUA INSCRIÇÃO</h1>
+                </div>
+                <FaRegCheckCircle className={styles.formCheckmarkIcon}/>
+                <p className={styles.formRegisteredDescription}>
+                  Guarde seus dados de acesso em um local seguro.
+                  Eles serão necessários para fazer login e participar
+                  das atividades durante o evento.
+                </p>
+                <p className={styles.formLogout} onClick={() => {
+                  logout()
+                  scrollTo('registration')
+                }}>
+                  Clique aqui para realizar outra inscrição
+                </p>
+              </>
+          ) : (
+              <>
+                <div className={styles.formTitle}>
+                  <h1>PARTICIPE CONOSCO</h1>
+                  <h1>INSCREVA-SE!</h1>
+                </div>
 
-          <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} noValidate>
-            <div className={styles.formField}>
-              <label htmlFor="name">Nome</label>
-              <input
-                  id="name"
-                  type="text"
-                  className={styles.formInput}
-                  placeholder="SisWeek"
-                  {...register("name")}
-              />
-              {errors.name && nameValue !== '' && (<p className={styles.formError}>{errors.name.message}</p>)}
-            </div>
+                <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} noValidate>
+                  <div className={styles.formField}>
+                    <label htmlFor="name">Nome</label>
+                    <input
+                        id="name"
+                        type="text"
+                        className={styles.formInput}
+                        placeholder="SisWeek"
+                        {...register("name")}
+                    />
+                    {errors.name && nameValue !== '' && (<p className={styles.formError}>{errors.name.message}</p>)}
+                  </div>
 
-            <div className={styles.formField}>
-              <label htmlFor="email">E-mail</label>
-              <input
-                  id="email"
-                  type="email"
-                  className={styles.formInput}
-                  placeholder="sisweek@gmail.com"
-                  {...register("email")}
-              />
-              {errors.email && emailValue != '' && (<p className={styles.formError}>{errors.email.message}</p>)}
-            </div>
+                  <div className={styles.formField}>
+                    <label htmlFor="email">E-mail</label>
+                    <input
+                        id="email"
+                        type="email"
+                        className={styles.formInput}
+                        placeholder="sisweek@gmail.com"
+                        {...register("email")}
+                    />
+                    {errors.email && emailValue != '' && (<p className={styles.formError}>{errors.email.message}</p>)}
+                  </div>
 
-            <div className={styles.formField}>
-              <label htmlFor="password">Senha</label>
-              <input
-                  id="password"
-                  type="password"
-                  className={styles.formInput}
-                  {...register("password")}
-              />
-              {errors.password && passwordValue != '' && (
-                  <p className={styles.formError}>{errors.password.message}</p>)}
-            </div>
+                  <div className={styles.formField}>
+                    <label htmlFor="password">Senha</label>
+                    <input
+                        id="password"
+                        type="password"
+                        className={styles.formInput}
+                        {...register("password")}
+                    />
+                    {errors.password && passwordValue != '' && (
+                        <p className={styles.formError}>{errors.password.message}</p>)}
+                  </div>
 
-            <div className={styles.formField}>
-              <label htmlFor="confirmPassword">Confirmar Senha</label>
-              <input
-                  id="confirmPassword"
-                  type="password"
-                  className={styles.formInput}
-                  {...register("confirmPassword")}
-              />
-              {errors.confirmPassword && confirmPasswordValue !== '' && (
-                  <p className={styles.formError}>{errors.confirmPassword.message}</p>)}
-            </div>
+                  <div className={styles.formField}>
+                    <label htmlFor="confirmPassword">Confirmar Senha</label>
+                    <input
+                        id="confirmPassword"
+                        type="password"
+                        className={styles.formInput}
+                        {...register("confirmPassword")}
+                    />
+                    {errors.confirmPassword && confirmPasswordValue !== '' && (
+                        <p className={styles.formError}>{errors.confirmPassword.message}</p>)}
+                  </div>
 
-            <button
-                type="submit"
-                className={styles.formButton}
-                disabled={!isValid || isSubmitting}>
-              {isSubmitting ? 'Enviando Inscrição...' : 'Inscrever-se'}
-            </button>
-          </form>
+                  <button
+                      type="submit"
+                      className={styles.formButton}
+                      disabled={!isValid || isSubmitting}>
+                    {isSubmitting ? 'Enviando Inscrição...' : 'Inscrever-se'}
+                  </button>
+                </form>
+              </>
+          )}
         </div>
       </section>
   )

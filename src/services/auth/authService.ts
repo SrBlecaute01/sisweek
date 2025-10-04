@@ -1,21 +1,11 @@
 import {AxiosError, type AxiosInstance} from "axios";
 import {BaseApiError, type ErrorResponse} from "../BaseApiError.ts";
 import authApi from "./authApi.ts";
-
-export interface UserData {
-  role: string;
-  isActive: boolean;
-  id: number;
-  name: string;
-  email: string;
-  qrCodeContent: string;
-  updated_at: string;
-  created_at: string;
-}
+import type {User} from "../../types";
 
 export interface RegisterUserData {
   token: string;
-  user: UserData;
+  user: User;
 }
 
 export interface RegisterUserResponse {
@@ -30,6 +20,11 @@ export interface RegisterUserRequest {
   readonly password: string;
 }
 
+export interface UserResponse {
+  success: true;
+  data: User;
+}
+
 export class AuthService {
 
   private api: AxiosInstance;
@@ -38,21 +33,35 @@ export class AuthService {
     this.api = api;
   }
 
+  async me(token: string): Promise<UserResponse> {
+    return await this.api
+        .get("/auth/me", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          }
+        })
+        .then((res) => res.data)
+        .catch(error => this.handleError(error))
+  }
+  
   async registerUser(data: RegisterUserRequest): Promise<RegisterUserResponse> {
     return await this.api.post('/auth/register', data)
         .then(res => res.data)
-        .catch(error => {
-          const axiosError = error as AxiosError<ErrorResponse>;
-          if (axiosError.isAxiosError && axiosError.response) {
-            const errorResponse: ErrorResponse = {
-              ...axiosError.response.data,
-              statusCode: axiosError.response.status,
-            };
-            throw new BaseApiError(errorResponse.error, errorResponse);
-          }
-          throw error;
-        });
+        .catch(error => this.handleError(error));
   }
+
+  private handleError(error: unknown) {
+    const axiosError = error as AxiosError<ErrorResponse>;
+    if (axiosError.isAxiosError && axiosError.response) {
+      const errorResponse: ErrorResponse = {
+        ...axiosError.response.data,
+        statusCode: axiosError.response.status,
+      };
+      throw new BaseApiError(errorResponse.error, errorResponse);
+    }
+    throw error;
+  }
+
 }
 
 export const authService = new AuthService(authApi);

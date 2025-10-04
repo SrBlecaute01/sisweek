@@ -5,6 +5,7 @@ import {animateScroll as scroll, Link} from 'react-scroll';
 import {useState} from "react";
 import {FiMenu} from "react-icons/fi";
 import {IoMdClose} from "react-icons/io";
+import {getNavbarHeight} from "../../utils";
 
 const links = [
   {
@@ -51,7 +52,7 @@ function Navbar() {
         <div className={styles.content}>
           <Logo
               className={styles.logo}
-              onClick={() => scroll.scrollToTop({ duration: 500, smooth: true })}
+              onClick={() => scroll.scrollToTop({duration: 500, smooth: true})}
           />
           <div className={`${styles.routes} ${isOpen ? styles.open : ""}`}>
             {(isOpen || isClosing) && (
@@ -86,11 +87,6 @@ function Navbar() {
         </div>
       </nav>
   )
-}
-
-function getNavbarHeight(): number {
-  const property = getComputedStyle(document.documentElement).getPropertyValue('--navbar-height');
-  return parseInt(property.trim().replace("px", ""));
 }
 
 export default Navbar;
