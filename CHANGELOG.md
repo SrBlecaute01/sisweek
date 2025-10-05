@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/SrBlecaute01/sisweek/compare/v1.0.3...v1.1.0) (2025-10-05)
+
+
+### Features
+
+* adjusts font-sizes in mobiles ([#11](https://github.com/SrBlecaute01/sisweek/issues/11)) ([cde8acb](https://github.com/SrBlecaute01/sisweek/commit/cde8acb21142bb0c91a3d796e08041403047d5fc))
+
 ## [1.0.3](https://github.com/SrBlecaute01/sisweek/compare/v1.0.2...v1.0.3) (2025-10-05)
 
 
