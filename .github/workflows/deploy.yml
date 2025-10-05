@@ -53,9 +53,9 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:${{ needs.release.outputs.tag_name }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_SERVICE_NAME }}:${{ needs.release.outputs.tag_name }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_SERVICE_NAME }}:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_SERVICE_NAME }}:latest
           cache-to: type=inline
 
   deploy:
@@ -74,9 +74,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             NETWORK_NAME="${{ vars.DOCKER_NETWORK_NAME }}"
-            SERVICE_NAME="${{ vars.COMPOSE_SERVICE_NAME }}"
+            SERVICE_NAME="${{ vars.DOCKER_SERVICE_NAME }}"
             
-            IMAGE_NAME="${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:latest"
+            IMAGE_NAME="${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_SERVICE_NAME }}:latest"
             
             echo "Starting deployment of ${IMAGE_NAME} on network ${NETWORK_NAME}"
             echo "Pulling latest image..."
