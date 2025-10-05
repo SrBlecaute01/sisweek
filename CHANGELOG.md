@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/SrBlecaute01/sisweek/compare/v1.0.0...v1.0.1) (2025-10-05)
+
+
+### Bug Fixes
+
+* use production enviroment in build and publish docker workflow ([7bec476](https://github.com/SrBlecaute01/sisweek/commit/7bec47676abd58e77d2fafdac536a4adae3c27fb))
+
 ## 1.0.0 (2025-10-05)
 
 
