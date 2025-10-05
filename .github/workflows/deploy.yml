@@ -53,9 +53,9 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.COMPOSE_SERVICE_NAME }}:${{ needs.release.outputs.tag_name }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.COMPOSE_SERVICE_NAME }}:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/${{ env.COMPOSE_SERVICE_NAME }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:${{ needs.release.outputs.tag_name }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.COMPOSE_SERVICE_NAME }}:latest
           cache-to: type=inline
 
 
@@ -65,9 +65,6 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     environment:
       name: production
-    env:
-      COMPOSE_DIR_REMOTE: /home/ubuntu/nginx
-      COMPOSE_SERVICE_NAME: sisweek-frontend
     steps:
       - name: Deploy via Docker Compose
         uses: appleboy/ssh-action@v1.0.3
@@ -77,8 +74,8 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            COMPOSE_DIR="${{ env.COMPOSE_DIR_REMOTE }}"
-            SERVICE_NAME="${{ env.COMPOSE_SERVICE_NAME }}"
+            COMPOSE_DIR="${{ vars.COMPOSE_DIR_REMOTE }}"
+            SERVICE_NAME="${{ vars.COMPOSE_SERVICE_NAME }}"
             
             echo "Starting deployment of version ${{ needs.release.outputs.tag_name }}"
             echo "Working with docker-compose in directory: ${COMPOSE_DIR}"
