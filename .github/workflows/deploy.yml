@@ -84,10 +84,10 @@ jobs:
             cd ${COMPOSE_DIR}
             
             echo "Pulling latest image for service ${SERVICE_NAME}..."
-            docker-compose pull ${SERVICE_NAME}
+            docker compose pull ${SERVICE_NAME}
             
             echo "Recreating service ${SERVICE_NAME}..."
-            docker-compose up -d --no-deps ${SERVICE_NAME}
+            docker compose up -d --no-deps ${SERVICE_NAME}
             
             echo "Cleaning up unused Docker images..."
             docker image prune -f
