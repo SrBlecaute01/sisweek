@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/SrBlecaute01/sisweek/compare/v1.0.1...v1.0.2) (2025-10-05)
+
+
+### Bug Fixes
+
+* use vars instead of env ([d772d95](https://github.com/SrBlecaute01/sisweek/commit/d772d954737721364faac659dcc2c8b82aef2394))
+
 ## [1.0.1](https://github.com/SrBlecaute01/sisweek/compare/v1.0.0...v1.0.1) (2025-10-05)
 
 
