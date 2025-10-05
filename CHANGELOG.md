@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/SrBlecaute01/sisweek/compare/v1.1.1...v1.2.0) (2025-10-05)
+
+
+### Features
+
+* change manifest icons ([306955c](https://github.com/SrBlecaute01/sisweek/commit/306955c3a256c12f21921b13964e13a42196af71))
+
 ## [1.1.1](https://github.com/SrBlecaute01/sisweek/compare/v1.1.0...v1.1.1) (2025-10-05)
 
 
