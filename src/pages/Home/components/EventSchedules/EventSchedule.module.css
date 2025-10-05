@@ -133,3 +133,17 @@
 
     border-radius: 30px;
 }
+
+@media only screen and (max-width: 767px) {
+    .scheduleSection {
+        padding: 50px;
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .scheduleMapsSection {
+        padding-top: 50px;
+    }
+}

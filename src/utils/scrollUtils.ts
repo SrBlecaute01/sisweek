@@ -10,5 +10,5 @@ export function scrollTo(id: string) {
 
 export function getNavbarHeight(): number {
   const property = getComputedStyle(document.documentElement).getPropertyValue('--navbar-height');
-  return parseInt(property.trim().replace("px", ""));
+  return parseInt(property.trim().replace("px", "")) - 1;
 }

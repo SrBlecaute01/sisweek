@@ -156,17 +156,38 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .formSection {
+        padding: 50px;
+    }
+
+    .formContainer {
+        padding: 30px 10px 30px 10px;
+    }
+
     .formContent {
-        gap: 50px;
+        gap: 20px;
     }
 
     .formTitle {
         h1 {
-            font-size: 32px;
+            font-size: 28px;
         }
     }
 
+    .formInput {
+        padding: 10px;
+    }
+
+    .formField {
+        margin: 0 0 10px 0;
+    }
+
     .formError {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .formButton {
+        margin-top: 0;
+        padding: 10px;
     }
 }
