@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/SrBlecaute01/sisweek/compare/v1.0.2...v1.0.3) (2025-10-05)
+
+
+### Bug Fixes
+
+* docker compose commands ([3eb46b9](https://github.com/SrBlecaute01/sisweek/commit/3eb46b9340982c72fcae2e78bce236d19e1e61b0))
+
 ## [1.0.2](https://github.com/SrBlecaute01/sisweek/compare/v1.0.1...v1.0.2) (2025-10-05)
 
 
