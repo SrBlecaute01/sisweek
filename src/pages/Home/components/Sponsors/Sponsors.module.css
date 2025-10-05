@@ -69,15 +69,16 @@
     }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .sponsorsSection {
         padding: 50px;
     }
 
     .sponsorsContent {
-        gap: 50px;
+        gap: 20px;
+
         h2 {
-            font-size: 32px;
+            font-size: 28px;
         }
     }
 
