@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/SrBlecaute01/sisweek/compare/v1.1.0...v1.1.1) (2025-10-05)
+
+
+### Bug Fixes
+
+* Dockerfile build command ([292e3df](https://github.com/SrBlecaute01/sisweek/commit/292e3df8e902154cb3fcbb83b6fee37a52bc66f8))
+
 ## [1.1.0](https://github.com/SrBlecaute01/sisweek/compare/v1.0.3...v1.1.0) (2025-10-05)
 
 
