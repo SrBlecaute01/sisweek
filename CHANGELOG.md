@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/SrBlecaute01/sisweek/compare/v1.2.0...v1.2.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* sisweek api url ([fbf6647](https://github.com/SrBlecaute01/sisweek/commit/fbf66473cac51a513c1d68769411e6bf34e2e0e9))
+
 ## [1.2.0](https://github.com/SrBlecaute01/sisweek/compare/v1.1.1...v1.2.0) (2025-10-05)
 
 
