@@ -1,8 +1,12 @@
 import {z} from 'zod';
+import {cpf} from '@dmalbuquerque/cpf-cnpj-validator'
 
 export const registrationSchema = z.object({
   name: z.string().min(3, "Precisa possuir no mínimo 3 caracteres."),
   email: z.email("Precisa ser um e-mail válido."),
+  cpf: z.string().refine(input => cpf.isValid(input), {
+    message: "Precisa ser um CPF válido."
+  }),
   password: z.string()
       .min(8, "Precisa possuir no mínimo 8 caracteres.")
       .max(16, "Não pode possuir mais de 16 caracteres."),

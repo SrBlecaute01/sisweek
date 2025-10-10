@@ -1,40 +1,45 @@
 .img_container{
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+
+  aspect-ratio: 400 / 320;
+  margin: 0 auto;
   position: relative;
-  width: 400px;
-  height: 320px;
 }
 
-.image{
-  position: absolute;
+.image {
   object-fit: cover;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.top_left{
-  top: 0px;
-  left: 0px;
-  width: 160px;
-  height: 160px;
+.top_left {
+  top: 0;
+  left: -2%;
+  width: 44%;
+  height: 55%;
   z-index: 0;
-  transition: all 1s ease-in-out;
-}
-.top_right{
-  top: 0px;
-  left: 240px;
-  width: 160px;
-  height: 160px;
-  z-index: 1;
-  transition: all 1s ease-in-out;
-}
-.bottom_mid{
-  top: 80px;
-  left: 80px;
-  width: 240px;
-  height: 240px;
-  z-index: 2;
-  transition: all 1s ease-in-out;
 }
 
-.fade_in{
+.top_right {
+  top: 0;
+  left: 58%;
+  width: 44%;
+  height: 55%;
+  z-index: 1;
+}
+
+.bottom_mid {
+  top: 22%;
+  left: 17%;
+  width: 66%;
+  height: 83%;
+  z-index: 2;
+}
+
+.fade_in {
   opacity: 1;
 }
 

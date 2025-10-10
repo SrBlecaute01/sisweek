@@ -1,64 +1,88 @@
-.about_container{
-  background-color: white;
+.container{
   width: 100%;
-  min-height: 450px;
+  min-height: 400px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 100px;
 }
 
-.text_container{
-  margin: 30px;
+.textContainer {
   max-width: 40%;
   text-align: justify;
 }
 
-.about_sisweek{
+.title {
   color: #0057FF;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 16px;
-  letter-spacing: -0.43px;
+  font-size: 28px;
+  font-weight: bold;
+
+  margin: 0;
+  padding: 0;
 }
 
-.about_h1{
-  font-family: Inter;
+.subTitle {
+  font-size: 20px;
   font-weight: 800;
-  font-size: 16px;
-  letter-spacing: -0.43px;
   color: #0D0E25;
 
   margin: 0;
   padding: 0;
 }
 
-.about_p{
-  margin: 25px 0 0 0;
+.text {
+  margin-top: 20px;
+
+  font-size: 17px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: -0.43px;
-  text-align: justify;
 
   color: #575757;
 }
 
-.anim_container{
+.highlight {
+  color: #0057FF;
+  font-weight: bold;
+
+  margin: 0;
+  padding: 0;
+}
+
+.animation {
   margin: 30px;
   width: 400px;
   height: 300px;
 }
 
-@media only screen and (max-width: 768px) {
-  .about_container{
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 50px;
     flex-direction: column;
-    padding-bottom: 10px;
   }
-  .text_container{
-    max-width: 80%;
+
+  .textContainer {
+    max-width: 85%;
     margin-bottom: 0;
+    text-align: left;
+    line-height: 20px;
   }
-  .anim_container{
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .animation {
     max-width: 80%;
   }
 }

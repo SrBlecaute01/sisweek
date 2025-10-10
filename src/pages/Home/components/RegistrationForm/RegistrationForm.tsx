@@ -6,9 +6,10 @@ import {toast} from "react-toastify";
 import {BaseApiError} from "../../../../services";
 import {HttpStatusCode} from "axios";
 import {type RegisterUserRequest} from "../../../../services/auth";
-import {createToast, scrollTo} from "../../../../utils";
+import {createToast, formatCPF, scrollTo} from "../../../../utils";
 import {useAuth} from "../../../../hooks";
 import { FaRegCheckCircle } from "react-icons/fa";
+import {useState} from "react";
 
 function RegistrationForm() {
   const { user, authenticated, register: registerUser, logout } = useAuth();
@@ -28,15 +29,19 @@ function RegistrationForm() {
     mode: 'onChange'
   });
 
+  const [cpf, setCpf] = useState('');
+
   const nameValue = watch('name');
   const emailValue = watch('email');
   const passwordValue = watch('password');
   const confirmPasswordValue = watch("confirmPassword");
+  const cpfValue = watch("cpf");
 
   const onSubmit = (formData: RegistrationFormData) => {
     const request: RegisterUserRequest = {
       name: formData.name,
       email: formData.email,
+      cpf: formData.cpf,
       password: formData.password
     }
 
@@ -119,6 +124,21 @@ function RegistrationForm() {
                         {...register("email")}
                     />
                     {errors.email && emailValue != '' && (<p className={styles.formError}>{errors.email.message}</p>)}
+                  </div>
+
+                  <div className={styles.formField}>
+                    <label htmlFor="cpf">CPF</label>
+                    <input
+                        id="cpf"
+                        type="text"
+                        value={cpf}
+                        className={styles.formInput}
+                        placeholder="123.456.789-00"
+                        {...register("cpf", {
+                          onChange: (event) => setCpf(formatCPF(event.target.value))
+                        })}
+                    />
+                    {errors.cpf && cpfValue != '' && (<p className={styles.formError}>{errors.cpf.message}</p>)}
                   </div>
 
                   <div className={styles.formField}>

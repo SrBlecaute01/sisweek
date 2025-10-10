@@ -17,6 +17,7 @@ export interface RegisterUserResponse {
 export interface RegisterUserRequest {
   readonly name: string;
   readonly email: string;
+  readonly cpf: string;
   readonly password: string;
 }
 
@@ -61,7 +62,6 @@ export class AuthService {
     }
     throw error;
   }
-
 }
 
 export const authService = new AuthService(authApi);
