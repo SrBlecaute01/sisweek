@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/SrBlecaute01/sisweek/compare/v1.2.1...v1.3.0) (2025-10-11)
+
+
+### Features
+
+* add about content ([fbfab8d](https://github.com/SrBlecaute01/sisweek/commit/fbfab8dcfa0d3f684be7ce1670c20a00397671c0))
+* add partial content of guests and schedules ([e441468](https://github.com/SrBlecaute01/sisweek/commit/e441468066b6bb38135e71436c6a606efce9436f))
+
 ## [1.2.1](https://github.com/SrBlecaute01/sisweek/compare/v1.2.0...v1.2.1) (2025-10-06)
 
 
