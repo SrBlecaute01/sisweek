@@ -1,17 +1,17 @@
 {
-  "center": [-10.28953547, -36.58427489],
+  "center": [-10.289891, -36.585760],
   "markers": [
     {
-      "position": [-10.290784, -36.585444],
-      "popupText": "OxeTech Lab"
+      "position": [-10.2890284, -36.5858419],
+      "popupText": "Casa de Aposentadoria"
     },
     {
       "position": [-10.2901698, -36.5856877],
       "popupText": "Centro de Conveções"
     },
     {
-      "position": [-10.2883105, -36.5829250],
-      "popupText": "Cine Penedo"
+      "position": [-10.2913283, -36.5859023],
+      "popupText": "Vila Dão Pêdu"
     }
   ]
 }

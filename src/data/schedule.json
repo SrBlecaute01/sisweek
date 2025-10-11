@@ -1,82 +1,148 @@
 {
-  "1": {
-    "day": "Segunda 22/09",
-    "schedules": [
-      {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
-      },
-      {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
-      },
-      {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
-      }
-    ]
-  },
-  "2": {
-    "day": "Terça 23/09",
-    "schedules": [
-      {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
-      }
-    ]
-  },
   "3": {
-    "day": "Quarta 24/09",
+    "day": "Quarta 29/10",
     "schedules": [
       {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
+        "title": "HACKATON",
+        "image": "hacker.svg",
+        "description": "",
+        "time": "",
+        "duration": "",
+        "location": "Casa de Aposentadoria"
+      },
+      {
+        "title": "Decodificando o Futuro: Inovação e Tecnologia",
+        "image": "maria-logo.jpg",
+        "description": "O foco deste debate é a inovação e a tecnologia, com uma abordagem inclusiva para mulheres na tecnologia e o público geral interessado em discutir e explorar o futuro neste campo.",
+        "time": "19:00h",
+        "duration": "40m",
+        "location": "Casa de Aposentadoria",
+        "speakers": [
+          {
+            "name": "Mar.ia",
+            "role": "Projeto de Extensão Mar.ia",
+            "bio": "Projeto de extensão composto por mulheres do curso de Sistemas de Informação da UFAL - Unidade Penedo, com o objetivo de desbravar o mundo da Inteligência Artificial (IA) e tecnologia embarcada! Aumentando a representatividade feminina na tecnologia, monstrando que mulheres podem e devem ser protagonistas na criação de soluções inteligentes e sustentáveis para o futuro!",
+            "showCard": false,
+            "image": "maria-logo.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Coffee Break",
+        "image": "coffee-break.jpeg",
+        "description": "",
+        "time": "19:40h",
+        "duration": "20m",
+        "location": "Casa de Aposentadoria"
+      },
+      {
+        "title": "Construindo a inovação: Cases de Sucesso",
+        "image": "rocket.svg",
+        "description": "Abordagem para a  construção da inovação através da apresentação de casos de sucesso.",
+        "speakers": [
+          {
+            "name": "Rodrigo",
+            "role": "CEO da Foco Sistemas e Especialista em Soluções Empresariais",
+            "bio": "Fundador e CEO da Foco Sistemas, Rodrigo Machado é especialista em ERP e em soluções tecnológicas voltadas para micro, pequenas e médias empresas. Com ampla experiência no setor, ele tem como missão transformar negócios complexos em resultados reais, ajudando empresas a crescer, lucrar e gerar empregos em todo o Brasil.",
+            "showCard": true,
+            "image": "rodrigo.jpeg"
+          },
+          {
+            "name": "Jay",
+            "role": "Empreendedor Criativo, Designer e Pesquisador",
+            "bio": "Graduando em Sistemas de Informação pela Universidade Federal de Alagoas, Jay é um nome de destaque no cenário de inovação e empreendedorismo em Penedo. CEO das startups Kombucha Pirá e Vegan Couro, ambas \"centelhadas\", ele também atua como Designer UX, QA e pesquisador no NEES, contribuindo com projetos de tecnologia e inovação na região.",
+            "showCard": true,
+            "image": "jay.jpeg"
+          },
+          {
+            "name": "Sophia",
+            "role": "Estudante, Empreendedora e Líder em Inovação",
+            "bio": "Graduanda em Sistemas de Informação pela Universidade Federal de Alagoas, Sophia é um dos grandes nomes em ascensão no ecossistema de tecnologia e inovação da região. Presidente da Rocket Jr, empresa júnior do curso, e CEO da startup FacilitaMercado",
+            "showCard": true,
+            "image": "sophia.jpeg"
+          }
+        ],
         "time": "18:00h",
         "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
+        "location": "Casa de Aposentadoria"
       }
     ]
   },
   "4": {
-    "day": "Quinta 25/09",
+    "day": "Quinta 30/10",
     "schedules": [
       {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
+        "title": "HACKATON",
+        "image": "hacker.svg",
+        "description": "",
+        "time": "",
+        "duration": "",
+        "location": "Casa de Aposentadoria"
+      },
+      {
+        "title": "1. Apresentações de Trabalhos Acadêmicos",
+        "description": "Apresentação dos resultados de projetos de pesquisa desenvolvidos no âmbito dos programas PIBITI e PIBIC, proporcionando aos estudantes uma oportunidade de compartilhar suas descobertas e avanços com a comunidade acadêmica.",
+        "time": "9:00h",
+        "duration": "3h",
+        "location": "Vila Dão Pêdu",
+        "speakers": []
+      },
+      {
+        "title": "2. Apresentações de Trabalhos Acadêmicos",
+        "description": "Apresentação dos resultados de projetos de pesquisa desenvolvidos no âmbito dos programas PIBITI e PIBIC, proporcionando aos estudantes uma oportunidade de compartilhar suas descobertas e avanços com a comunidade acadêmica.",
+        "time": "14:00h",
+        "duration": "3h",
+        "location": "Vila Dão Pêdu",
+        "speakers": []
+      },
+      {
+        "title": "PodTek",
+        "description": "PodTek é um podcast com os professores, funcionando quase como uma roda de conversa.",
+        "time": "19:00h",
+        "duration": "40m",
+        "location": "Vila Dão Pêdu",
+        "speakers": [
+          {
+            "name": "Jairo",
+            "role": "Professor, Pesquisador e Especialista em Inteligência Artificial",
+            "bio": "Doutor pela Universidade de São Paulo (USP) e um especialista em Inteligência Artificial, com foco em Deep Learning e Processamento de Linguagem Natural (PLN), explorando as dimensões sintáticas, semânticas e pragmáticas da linguagem. Sua atuação profissional destaca-se na Tecnologia Educacional (EdTech): ele é co-fundador da spin-off Eneuron - Computação Cognitiva, que desenvolve soluções de IA para o entendimento de textos manuscritos e transcritos. Além disso, Jário integra a equipe de coordenação de Inteligência Artificial do projeto 'Plataforma Adaptativa de Avaliação e Diagnóstico Pedagógico de Textos' do Ministério da Educação (MEC), complementando suas atividades de pesquisa em Mineração de Textos e sistemas de Recomendação Pedagógica Personalizada.",
+            "showCard": true,
+            "image": "jairo.jpeg"
+          },
+          {
+            "name": "Gustavo",
+            "role": "Professor, Pesquisador e Líder Acadêmico em Tecnologia e Inovação",
+            "bio": "Doutor e Mestre em Ciência da Computação pela Universidade Federal de Pernambuco - UFPE (2022, 2018). Graduado em Licenciatura em Computação pela Universidade de Pernambuco - UPE (2015). Ingressou como professor adjunto no curso de Graduação em Sistemas de Informação da Universidade Federal de Alagoas (UFAL) na unidade educacional de Penedo - AL (2022). Vice-coordenador do curso Sistemas de Informação na UFAL no biênio 2023-2025, alcançando o conceito 4 no Enade 2024. Realiza pesquisas na área de Ciência da Computação, com ênfase em Desenvolvimento de Software e Inteligência Artificial, atuando principalmente nos seguintes temas: Programação Web e Mobile, Ciência de Dados e Aprendizado de Máquina.",
+            "showCard": true,
+            "image": "gustavo.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "Coffee Break",
+        "description": "",
+        "time": "19:40h",
+        "duration": "20m",
+        "location": "Vila Dão Pêdu"
       }
     ]
   },
   "5": {
-    "day": "Sexta 26/09",
+    "day": "Sexta 31/10",
     "schedules": [
       {
-        "title": "Palestra",
-        "speakers": ["Zezinho", "Luizinho"],
-        "time": "18:00h",
-        "duration": "30m",
-        "location": "Cine Penedo",
-        "image": "speaker.png"
+        "title": "HACKATON",
+        "image": "hacker.svg",
+        "description": "",
+        "time": "",
+        "duration": "",
+        "location": "Centro de Convenções"
+      },
+      {
+        "title": "Cerimônia de Encerramento",
+        "description": "Cerimônia de encerramento do evento Sisweek, com entrega de prêmios e agradecimentos aos participantes.",
+        "time": "14:00h",
+        "location": "Centro de Convenções"
       }
     ]
   }

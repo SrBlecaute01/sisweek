@@ -45,8 +45,7 @@ function EventSchedules() {
                     }}
                     breakpoints={{
                       320: { slidesPerView: 1 },
-                      640: { slidesPerView: 3 },
-                      1024: { slidesPerView: 5 }
+                      640: { slidesPerView: 3 }
                     }}
                 >
                   {Object.values(schedules).map((item) => {
@@ -64,17 +63,27 @@ function EventSchedules() {
           </section>
           <section className={styles.scheduleCardsSection}>
             {selectedSchedule && selectedSchedule.schedules.map((event, index) => (
-                <div className={styles.scheduleCardContainer}>
-                  <EventCard
-                      key={index}
-                      title={event.title}
-                      speakers={event.speakers}
-                      time={event.time}
-                      duration={event.duration}
-                      location={event.location}
-                      image={event.image}
-                  />
-                </div>
+                <>
+                  <div className={styles.scheduleCardContainer} key={index}>
+                    <EventCard
+                        key={index}
+                        title={event.title}
+                        description={event.description}
+                        speakers={event.speakers?.map((speaker) => {
+                          return {
+                            name: speaker.name,
+                            bio: speaker.bio,
+                            image: speaker.image || ""
+                          }
+                        }) || []}
+                        time={event.time}
+                        duration={event.duration}
+                        location={event.location}
+                        className={styles.scheduleCard}
+                    />
+                  </div>
+                  {index == 0 && (<hr className={styles.scheduleLine}/>)}
+                </>
             ))}
           </section>
         </section>

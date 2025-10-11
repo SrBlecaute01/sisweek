@@ -3,22 +3,28 @@
     height: 100%;
 
     display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    padding: 0 20px 0 20px;
+    background: #DEDEDE;
+}
+
+.eventCardContent {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
     min-height: 120px;
-
-    border-radius: 10px;
-    background: #DEDEDE;
-    box-sizing: border-box;
-
-    padding: 0 20px 0 20px;
 }
 
 .eventInfo {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .eventImageWrapper {
@@ -28,14 +34,19 @@
 .eventImage {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+
+    border-radius: 20%;
+
     object-fit: cover;
+    box-sizing: border-box;
 }
 
 .eventDetails {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .eventTitle {
@@ -95,6 +106,57 @@
     width: 32px;
     height: 32px;
     flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.expanded {
+    transform: rotate(90deg);
+}
+
+.expandedEventContent {
+    font-size: 16px;
+    font-style: normal;
+
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    box-sizing: border-box;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.expandedSpeakersContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.expandedSpeaker {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.expandedSpeakerName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20%;
+        object-fit: cover;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -106,8 +168,13 @@
         font-size: 12px;
     }
 
-    .speakerName {
-        font-size: 12px;
+    .eventImage {
+        width: 50px;
+        height: 50px;
+    }
+
+    .eventImageWrapper {
+        margin-right: 10px;
     }
 
     .eventSpeakers {
@@ -115,11 +182,24 @@
     }
 
     .eventLocation {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .eventTimeItem {
         gap: 5px;
         font-size: 12px;
     }
+
+    .speakerName {
+        font-size: 12px;
+    }
+
+    .expandedEventContent {
+        font-size: 12px;
+    }
+
+    .expandedSpeaker {
+        flex-direction: column;
+    }
+
 }

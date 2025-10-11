@@ -95,7 +95,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+}
+
+.scheduleLine {
+    width: 100%;
 }
 
 .scheduleCardContainer {
@@ -103,6 +106,45 @@
     opacity: 0;
     transform: translateY(40px);
     animation: scheduleCardAnimation 0.8s forwards;
+    margin-top: 50px;
+}
+
+.scheduleCardsSection .scheduleCardContainer:first-child {
+    border-radius: 10px;
+    animation: scheduleCardAnimation 0.8s forwards, pulseShadow 2s infinite;
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow:
+                0 8px 16px 0px rgba(51, 201, 255, 0.18),
+                -8px 0 16px 0px rgba(51, 201, 255, 0.18),
+                8px 0 16px 0px rgba(51, 201, 255, 0.18);
+    }
+    25% {
+        box-shadow:
+                0 12px 24px 2px rgba(68, 132, 255, 0.22),
+                -12px 0 24px 2px rgba(68, 132, 255, 0.22),
+                12px 0 24px 2px rgba(68, 132, 255, 0.22);
+    }
+    50% {
+        box-shadow:
+                0 18px 32px 4px rgba(68, 132, 255, 0.32),
+                -18px 0 32px 4px rgba(68, 132, 255, 0.32),
+                18px 0 32px 4px rgba(68, 132, 255, 0.32);
+    }
+    75% {
+        box-shadow:
+                0 12px 24px 2px rgba(68, 132, 255, 0.22),
+                -12px 0 24px 2px rgba(68, 132, 255, 0.22),
+                12px 0 24px 2px rgba(68, 132, 255, 0.22);
+    }
+    100% {
+        box-shadow:
+                0 8px 16px 0px rgba(51, 201, 255, 0.18),
+                -8px 0 16px 0px rgba(51, 201, 255, 0.18),
+                8px 0 16px 0px rgba(51, 201, 255, 0.18);
+    }
 }
 
 @keyframes scheduleCardAnimation {
@@ -145,5 +187,9 @@
 
     .scheduleMapsSection {
         padding-top: 50px;
+    }
+
+    .scheduleCardContainer {
+        margin-top: 30px;
     }
 }
