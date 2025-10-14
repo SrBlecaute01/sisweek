@@ -30,12 +30,16 @@ function RegistrationForm() {
   });
 
   const [cpf, setCpf] = useState('');
-
   const nameValue = watch('name');
   const emailValue = watch('email');
   const passwordValue = watch('password');
   const confirmPasswordValue = watch("confirmPassword");
   const cpfValue = watch("cpf");
+
+  const errorMessages: Record<string, string> = {
+    "cpf já cadastrado": "A inscrição para esse cpf já foi realizada!",
+    "e-mail já cadastrado": "A inscrição para esse e-mail já foi realizada!"
+  };
 
   const onSubmit = (formData: RegistrationFormData) => {
     const request: RegisterUserRequest = {
@@ -60,7 +64,11 @@ function RegistrationForm() {
         .catch((error) => {
           let message = "Ocorreu um erro inesperado ao tentar realizar a sua inscrição. Por favor, tente novamente mais tarde";
           if (error instanceof BaseApiError && error.statusCode === HttpStatusCode.BadRequest) {
-            message = "A inscrição para esse e-mail já foi realizada!";
+            const errorText = error.message.trim().toLowerCase();
+            const customMessage = Object.entries(errorMessages)
+                .find(([key]) => errorText.includes(key))?.[1];
+
+            if (customMessage) message = customMessage;
           }
 
           toast.update(toastId, {
