@@ -9,6 +9,12 @@
 
   border-radius: 25px;
   background-color: white;
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .card_img {

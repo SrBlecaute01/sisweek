@@ -15,12 +15,14 @@ export default function Guests() {
       <section id="speakers" className={styles.guests}>
         <h1 className={styles.title}>NOSSOS PALESTRANTES</h1>
         <div className={styles.guests_container}>
-          {speakers.map(speaker => {
-            return <CardGuest
-                name={speaker.name}
-                desc={speaker.role}
-                image={speaker.image}/>
-          })}
+          {speakers
+              .sort(() => Math.random() - 0.5)
+              .map(speaker => {
+                return <CardGuest
+                    name={speaker.name}
+                    desc={speaker.role}
+                    image={speaker.image}/>
+              })}
         </div>
       </section>
   );
