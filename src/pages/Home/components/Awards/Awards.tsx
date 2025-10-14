@@ -1,5 +1,4 @@
 import styles from './Awards.module.css'
-import award from '../../../../assets/awards/camisa.png';
 
 function Awards() {
   return (
@@ -9,15 +8,7 @@ function Awards() {
         </div>
 
         <div className={styles.awardsCards}>
-          <div className={styles.card}>
-            <img src={award} alt="Camisa branca do evento"/>
-          </div>
-          <div className={styles.card}>
-            <img src={award} alt="Camisa azul do evento"/>
-          </div>
-          <div className={styles.card}>
-            <img src={award} alt="Camisa preta do evento"/>
-          </div>
+          <h3 className={styles.awardsSoon}>Em breve...</h3>
         </div>
       </div>
   )

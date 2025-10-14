@@ -45,8 +45,10 @@ function Sponsors() {
             <h2>CONHEÇA NOSSOS PATROCINADORES</h2>
           </div>
           <div className={styles.sponsorsRows}>
-            <SponsorsRow rowKey="1" speed={2000}/>
-            <SponsorsRow rowKey="2" speed={2000} reverse/>
+            <h3 className={styles.sponsorsSoon}>Em breve...</h3>
+
+      {/*      <SponsorsRow rowKey="1" speed={2000}/>
+            <SponsorsRow rowKey="2" speed={2000} reverse/>*/}
           </div>
         </div>
       </section>
