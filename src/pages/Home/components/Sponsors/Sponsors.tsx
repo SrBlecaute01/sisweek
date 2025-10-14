@@ -1,8 +1,6 @@
 import styles from './Sponsors.module.css'
-import logo from '../../../../assets/sponsors/sebrae.png';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay} from "swiper/modules";
 
+/*
 const sponsors = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 type SponsorsRowProps = {
@@ -35,7 +33,7 @@ function SponsorsRow({ reverse = false, speed, rowKey }: SponsorsRowProps) {
         ))}
       </Swiper>
   )
-}
+}*/
 
 function Sponsors() {
   return (
