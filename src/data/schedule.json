@@ -3,12 +3,11 @@
     "day": "Quarta 29/10",
     "schedules": [
       {
-        "title": "HACKATON",
+        "title": "HACKATHON",
         "image": "hacker.svg",
-        "description": "",
-        "time": "",
-        "duration": "",
-        "location": "Casa de Aposentadoria"
+        "description": "Hackathon da SisWeek é uma maratona de desenvolvimento que reúne equipes para enfrentar desafios reais e propor soluções inovadoras em um tempo limitado. Mais do que uma competição, o evento é uma jornada de criatividade, colaboração e de aplicação prática do conhecimento técnico. Ao longo da jornada, os participantes mergulham em problemas do mundo real, desenvolvem projetos impactantes e apresentam suas criações no encerramento da SisWeek.",
+        "time": "9:00h - 22:00h",
+        "location": "Vila Dão Pêdu"
       },
       {
         "title": "Decodificando o Futuro: Inovação e Tecnologia",
@@ -30,7 +29,7 @@
       {
         "title": "Coffee Break",
         "image": "coffee-break.jpeg",
-        "description": "",
+        "description": "Momento de pausa para recarregar as energias. O coffee break é uma oportunidade para os participantes relaxarem, conversarem e trocarem experiências de forma descontraída, enquanto apreciam um lanche e um bom café antes da próxima atividade do evento.",
         "time": "19:40h",
         "duration": "20m",
         "location": "Casa de Aposentadoria"
@@ -38,7 +37,7 @@
       {
         "title": "Construindo a inovação: Cases de Sucesso",
         "image": "rocket.svg",
-        "description": "Abordagem para a  construção da inovação através da apresentação de casos de sucesso.",
+        "description": "Roda de conversa onde os participantes irão compartilhar suas experiências e os caminhos percorridos para transformar ideias em soluções impactantes. O debate será uma oportunidade para explorar as estratégias, os desafios superados e as lições que aprenderam na construção da inovação, oferecendo insights valiosos para os estudantes, profissionais e entusiastas da área.",
         "speakers": [
           {
             "name": "Rodrigo",
@@ -62,8 +61,8 @@
             "image": "sophia.jpeg"
           }
         ],
-        "time": "18:00h",
-        "duration": "30m",
+        "time": "20:00",
+        "duration": "1h 10m",
         "location": "Casa de Aposentadoria"
       }
     ]
@@ -72,12 +71,12 @@
     "day": "Quinta 30/10",
     "schedules": [
       {
-        "title": "HACKATON",
+        "title": "HACKATHON",
         "image": "hacker.svg",
-        "description": "",
-        "time": "",
+        "description": "No segundo dia do Hackathon, as equipes continuarão a desenvolver suas soluções, aprofundando-se nos desafios que foram propostos. Os profissionais de suporte estarão disponíveis durante todo o período, dando orientações sobre cada etapa do processo de desenvolvimento. Eles compartilharão conhecimentos técnicos, auxiliando os participantes para refinar suas ideias,abordagens e superar possíveis obstáculos. Esta será uma oportunidade crucial para as equipes receberem feedback especializado e aprimorarem a execução de seus projetos para as apresentações finais.",
+        "time": "9:00h - 22:00h",
         "duration": "",
-        "location": "Casa de Aposentadoria"
+        "location": "Vila Dão Pêdu"
       },
       {
         "title": "1. Apresentações de Trabalhos Acadêmicos",
@@ -97,7 +96,7 @@
       },
       {
         "title": "PodTek",
-        "description": "PodTek é um podcast com os professores, funcionando quase como uma roda de conversa.",
+        "description": "PodTek é um podcast onde professores e especialistas da área de Sistemas de Informação se reúnem em uma roda de conversa descontraída. O objetivo é compartilhar experiências, debater tendências tecnológicas e oferecer insights sobre o universo da TI, desde a academia até o mercado de trabalho em um formato dinâmico e acessível.",
         "time": "19:00h",
         "duration": "40m",
         "location": "Vila Dão Pêdu",
@@ -120,10 +119,24 @@
       },
       {
         "title": "Coffee Break",
-        "description": "",
+        "description": "Momento de pausa para recarregar as energias. O coffee break é uma oportunidade para os participantes relaxarem, conversarem e trocarem experiências de forma descontraída, enquanto apreciam um lanche e um bom café antes da próxima atividade do evento.",
         "time": "19:40h",
         "duration": "20m",
         "location": "Vila Dão Pêdu"
+      },
+      {
+        "title": "Code In The Dark",
+        "description": "O objetivo é resolver desafios com soluções práticas e inovadoras para problemas específicos em um curto período, promovendo a criatividade, colaboração e aplicação prática de conhecimentos em tecnologia.",
+        "time": "20:00h",
+        "duration": "1h 30m",
+        "location": "Vila Dão Pêdu"
+      },
+      {
+        "title": "Happy Hour",
+        "description": "O Happy Hour é um momento para celebrar, interagir com colegas e palestrantes, fortalecer conexões e aproveitar um ambiente leve e acolhedor fora das atividades formais do evento.",
+        "time": "20:30h",
+        "duration": "",
+        "location": "Praça 12 de Abril"
       }
     ]
   },
@@ -131,17 +144,24 @@
     "day": "Sexta 31/10",
     "schedules": [
       {
-        "title": "HACKATON",
-        "image": "hacker.svg",
-        "description": "",
-        "time": "",
-        "duration": "",
-        "location": "Centro de Convenções"
+        "title": "HACKATHON",
+        "description": "Na etapa final do Hackathon, as equipes finalizam seus projetos e se preparam para as apresentações. Neste momento acontecem os testes finais e à organização das demonstrações que serão avaliadas, e a equipe vencedora do evento receberá um prêmio de 10 mil reais, celebrando o esforço e a criatividade que foram dedicados.",
+        "time": "09:00h",
+        "duration": "3h",
+        "location": "Vila Dão Pêdu"
       },
       {
-        "title": "Cerimônia de Encerramento",
+        "title": "Exposição de trabalhos acadêmicos",
+        "description": "Esta exposição reúne os projetos de pesquisas acadêmicas desenvolvidas por estudantes da UFAL - Campus Penedo. É uma oportunidade para a comunidade acadêmica e o público em geral conhecerem as inovações, e o impacto dos trabalhos realizados no campo da tecnologia, demonstrando o engajamento e a contribuição dos alunos para a área de Sistemas de Informação.",
+        "time": "9:00h",
+        "duration": "3h",
+        "location": "Vila Dão Pêdu"
+      },
+      {
+        "title": "Premiação do Sisweek (Encerramento)",
         "description": "Cerimônia de encerramento do evento Sisweek, com entrega de prêmios e agradecimentos aos participantes.",
         "time": "14:00h",
+        "duration": "",
         "location": "Centro de Convenções"
       }
     ]

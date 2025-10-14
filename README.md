@@ -15,10 +15,6 @@
   <img src="https://img.shields.io/github/languages/top/SrBlecaute01/sisweek" alt="Top language">
 </div>
 
-<br>
-
-![Screenshot da Aplicação](./src/assets/banner.png)
-
 ## 📋 Índice
 
 - Sobre o Projeto
