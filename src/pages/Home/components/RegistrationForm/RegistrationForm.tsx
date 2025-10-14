@@ -38,7 +38,7 @@ function RegistrationForm() {
 
   const errorMessages: Record<string, string> = {
     "cpf já cadastrado": "A inscrição para esse cpf já foi realizada!",
-    "e-mail já cadastrado": "A inscrição para esse e-mail já foi realizada!"
+    "email já cadastrado": "A inscrição para esse e-mail já foi realizada!"
   };
 
   const onSubmit = (formData: RegistrationFormData) => {
