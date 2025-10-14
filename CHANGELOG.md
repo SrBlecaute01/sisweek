@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/SrBlecaute01/sisweek/compare/v1.4.1...v1.4.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* e-mail already registered response ([ab42b50](https://github.com/SrBlecaute01/sisweek/commit/ab42b5083a94d0fd382eb77ce09431155a417585))
+
 ## [1.4.1](https://github.com/SrBlecaute01/sisweek/compare/v1.4.0...v1.4.1) (2025-10-14)
 
 
