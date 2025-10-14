@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0](https://github.com/SrBlecaute01/sisweek/compare/v1.3.0...v1.4.0) (2025-10-14)
+
+
+### Features
+
+* add scale animation on hover to guest cards ([04058fc](https://github.com/SrBlecaute01/sisweek/commit/04058fcc5fe7c6474cc4463b0373969e3b74487f))
+* hide awards and sponsors content ([833422f](https://github.com/SrBlecaute01/sisweek/commit/833422f1a0126cd5d98a0b89e63a9f5b87fb8859))
+
+
+### Bug Fixes
+
+* remove unused function ([9a9b18d](https://github.com/SrBlecaute01/sisweek/commit/9a9b18dc514df29eec44b8cc3a3f85d3697c9717))
+
 ## [1.3.0](https://github.com/SrBlecaute01/sisweek/compare/v1.2.1...v1.3.0) (2025-10-11)
 
 
