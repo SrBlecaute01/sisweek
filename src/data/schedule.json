@@ -59,6 +59,13 @@
             "bio": "Graduanda em Sistemas de Informação pela Universidade Federal de Alagoas, Sophia é um dos grandes nomes em ascensão no ecossistema de tecnologia e inovação da região. Presidente da Rocket Jr, empresa júnior do curso, e CEO da startup FacilitaMercado",
             "showCard": true,
             "image": "sophia.jpeg"
+          },
+          {
+            "name": "Waldsson",
+            "role": "Desenvolvedor",
+            "bio": "Mestrando em Informática pela Universidade Federal de Alagoas - UFAL, com pesquisa na área de blockchain. Graduado em Sistemas de Informação pela UFAL, unidade educacional de Penedo. Foi membro fundador da Rocket JR, empresa júnior do curso. Atua como desenvolvedor de software, pesquisador e é Founder e CTO da startup Facilita Mercado. Sua atuação profissional e acadêmica foca no desenvolvimento de software e na aplicação de tecnologias emergentes, com ênfase nos seguintes temas: Blockchain, Open source e SaaS (Software as a Service).",
+            "showCard": true,
+            "image": "waldsson.jpeg"
           }
         ],
         "time": "20:00",
@@ -103,7 +110,7 @@
         "speakers": [
           {
             "name": "Jário",
-            "role": "Professor, Pesquisador e Especialista em Inteligência Artificial",
+            "role": "Professor, Especialista em Inteligência Artificial e Inovação em Tecnologia Educacional",
             "bio": "Doutor pela Universidade de São Paulo (USP) e um especialista em Inteligência Artificial, com foco em Deep Learning e Processamento de Linguagem Natural (PLN), explorando as dimensões sintáticas, semânticas e pragmáticas da linguagem. Sua atuação profissional destaca-se na Tecnologia Educacional (EdTech): ele é co-fundador da spin-off Eneuron - Computação Cognitiva, que desenvolve soluções de IA para o entendimento de textos manuscritos e transcritos. Além disso, Jário integra a equipe de coordenação de Inteligência Artificial do projeto 'Plataforma Adaptativa de Avaliação e Diagnóstico Pedagógico de Textos' do Ministério da Educação (MEC), complementando suas atividades de pesquisa em Mineração de Textos e sistemas de Recomendação Pedagógica Personalizada.",
             "showCard": true,
             "image": "jairo.jpeg"
@@ -114,6 +121,13 @@
             "bio": "Doutor e Mestre em Ciência da Computação pela Universidade Federal de Pernambuco - UFPE (2022, 2018). Graduado em Licenciatura em Computação pela Universidade de Pernambuco - UPE (2015). Ingressou como professor adjunto no curso de Graduação em Sistemas de Informação da Universidade Federal de Alagoas (UFAL) na unidade educacional de Penedo - AL (2022). Vice-coordenador do curso Sistemas de Informação na UFAL no biênio 2023-2025, alcançando o conceito 4 no Enade 2024. Realiza pesquisas na área de Ciência da Computação, com ênfase em Desenvolvimento de Software e Inteligência Artificial, atuando principalmente nos seguintes temas: Programação Web e Mobile, Ciência de Dados e Aprendizado de Máquina.",
             "showCard": true,
             "image": "gustavo.jpeg"
+          },
+          {
+            "name": "Thyago",
+            "role": "Pesquisador em Inteligência Artificial e Tecnologias Educacionais",
+            "bio": "Professor Adjunto na Universidade Federal de Alagoas (UFAL), lotado na Unidade Educacional de Penedo, onde atua na área de Algoritmos e Programação. É também pesquisador do Núcleo de Excelência em Tecnologias Sociais (NEES), atuando em projetos em colaboração com o Fundo Nacional de Desenvolvimento da Educação (FNDE/MEC) na formulação e execução de políticas públicas educacionais baseadas em evidências. Doutor em Ciências da Computação e Matemática Computacional pela Universidade de São Paulo (USP), desenvolve pesquisas em Inteligência Artificial na Educação (AIED), com ênfase na integração da Inteligência Artificial (IA) e da Inteligência Coletiva (IC) para o aprimoramento de tecnologias educacionais.",
+            "showCard": true,
+            "image": "thyago.jpeg"
           }
         ]
       },
