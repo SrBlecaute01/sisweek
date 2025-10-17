@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/SrBlecaute01/sisweek/compare/v1.4.2...v1.5.0) (2025-10-17)
+
+
+### Features
+
+* add partial content of schedules ([02e7ba7](https://github.com/SrBlecaute01/sisweek/commit/02e7ba7b1ae639e7afca05be322511274aebdf3d))
+
 ## [1.4.2](https://github.com/SrBlecaute01/sisweek/compare/v1.4.1...v1.4.2) (2025-10-14)
 
 
