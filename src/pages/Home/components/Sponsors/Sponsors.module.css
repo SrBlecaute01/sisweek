@@ -64,8 +64,8 @@
 
     img {
         max-width: 250px;
-        max-height: 250px;
-        object-fit: cover;
+        max-height: 150px;
+        object-fit: scale-down;
     }
 }
 
