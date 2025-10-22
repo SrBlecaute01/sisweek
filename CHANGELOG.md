@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/SrBlecaute01/sisweek/compare/v1.5.0...v1.6.0) (2025-10-22)
+
+
+### Features
+
+* added sponsors to the site ([#21](https://github.com/SrBlecaute01/sisweek/issues/21)) ([7dd754f](https://github.com/SrBlecaute01/sisweek/commit/7dd754f644fa87a81906b077352daf8ec8b5c6bb))
+
 ## [1.5.0](https://github.com/SrBlecaute01/sisweek/compare/v1.4.2...v1.5.0) (2025-10-17)
 
 
