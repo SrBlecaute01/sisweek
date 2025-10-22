@@ -1,7 +1,10 @@
+import { Swiper, SwiperSlide } from 'swiper/react'
 import styles from './Sponsors.module.css'
+import { Autoplay } from 'swiper/modules'
 
-/*
-const sponsors = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const sponsors = Object.values(import.meta.glob('../../../../assets/sponsors/*.{png,jpg,jpeg,svg}',  {eager: true})) as {default: string}[]
+
+//const sponsors = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 type SponsorsRowProps = {
   reverse?: boolean
@@ -24,18 +27,20 @@ function SponsorsRow({ reverse = false, speed, rowKey }: SponsorsRowProps) {
             0: {slidesPerView: 2}
           }}
       >
-        {sponsors.map(n => (
-            <SwiperSlide key={`${rowKey}-${n}`}>
+        {sponsors.map((n, key) => (
+            <SwiperSlide key={`${rowKey}-${key}`}>
               <div className={styles.sponsorsItem}>
-                <img src={logo} alt={`Patrocinador ${n}`} />
+                <img src={n.default} alt={`Patrocinador ${n.default}`} />
               </div>
             </SwiperSlide>
         ))}
       </Swiper>
   )
-}*/
+}
 
 function Sponsors() {
+  
+console.log(sponsors)
   return (
       <section id="sponsors" className={styles.sponsorsSection}>
         <div className={styles.sponsorsContent}>
@@ -43,10 +48,8 @@ function Sponsors() {
             <h2>CONHEÇA NOSSOS PATROCINADORES</h2>
           </div>
           <div className={styles.sponsorsRows}>
-            <h3 className={styles.sponsorsSoon}>Em breve...</h3>
-
-      {/*      <SponsorsRow rowKey="1" speed={2000}/>
-            <SponsorsRow rowKey="2" speed={2000} reverse/>*/}
+            <SponsorsRow rowKey="1" speed={2000}/>
+            <SponsorsRow rowKey="2" speed={2000} reverse/>
           </div>
         </div>
       </section>
