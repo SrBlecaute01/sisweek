@@ -23,6 +23,13 @@
             "bio": "Projeto de extensão composto por mulheres do curso de Sistemas de Informação da UFAL - Unidade Penedo, com o objetivo de desbravar o mundo da Inteligência Artificial (IA) e tecnologia embarcada! Aumentando a representatividade feminina na tecnologia, monstrando que mulheres podem e devem ser protagonistas na criação de soluções inteligentes e sustentáveis para o futuro!",
             "showCard": false,
             "image": "maria-logo.jpg"
+          },
+          {
+            "name": "Lívia",
+            "role": "Professora de Matemática e Especialista em Gestão de Projetos em Tecnologia da informação",
+            "bio": "Possui Mestrado em Modelagem Computacional de Conhecimento pela UFAL. Possui Especialização em Gestão de Projetos em Tecnologia da Informação. Possui Graduação em Licenciatura em Matemática. Possui Graduação em Análise de Sistemas. Tem experiência na área de Análise de Sistemas, com ênfase em Gestão de Projetos. Em 2009, como Gerente de Projetos de uma empresa alagoana participou da conquista do selo MPS.BR Nível F. Em 2013, como Representante do Grupo de Processos de uma empresa alagoana participou da conquista do selo MPS.BR Nível C. Tem experiência na área acadêmica no ensino de Matemática, Computação e Administração em cursos de nível superior da rede particular e pública. Atualmente, é docente da Universidade Federal de Alagoas.",
+            "showCard": true,
+            "image": "livia.jpeg"
           }
         ]
       },
@@ -128,6 +135,20 @@
             "bio": "Professor Adjunto na Universidade Federal de Alagoas (UFAL), lotado na Unidade Educacional de Penedo, onde atua na área de Algoritmos e Programação. É também pesquisador do Núcleo de Excelência em Tecnologias Sociais (NEES), atuando em projetos em colaboração com o Fundo Nacional de Desenvolvimento da Educação (FNDE/MEC) na formulação e execução de políticas públicas educacionais baseadas em evidências. Doutor em Ciências da Computação e Matemática Computacional pela Universidade de São Paulo (USP), desenvolve pesquisas em Inteligência Artificial na Educação (AIED), com ênfase na integração da Inteligência Artificial (IA) e da Inteligência Coletiva (IC) para o aprimoramento de tecnologias educacionais.",
             "showCard": true,
             "image": "thyago.jpeg"
+          },
+          {
+            "name": "Dalgoberto",
+            "role": "Doutor em Tecnologias e Políticas Públicas, Mestre em Modelagem Computacional e Graduado em Sistemas de Informação.",
+            "bio": "Doutor em Tecnologias e Políticas Públicas, Mestre em Modelagem Computacional e Graduado em Sistemas de Informação. Pesquisador de áreas relacionadas a Tecnologia em Política Públicas Educacionais, Gerenciamento de Projetos, Tecnologias Educacionais e usabilidade. Atualmente atua como docente na Universidade Federal de Alagoas - Campus Arapiraca - Unidade Penedo, lecionando na área de Gestão em Sistemas de Informação nos cursos de Sistemas de Informação. Atua em projetos de spin-offs junto ao Ministério de Educação e FNDE na concepção de Políticas Públicas de Tecnologias Educacionais, Portal de Atos Normativos da Educação e no Programa Nacional do Livro Didático-PNLD. Experiência em EAD como tutor de sala, tutor-online e professor pesquisador. Experiência em Docência no Ensino Superior nas áreas de tecnologia da informação, gestão de negócios, gestão educacional e gerenciamento de projetos em diversas instituições de ensino Superior como UNINASSAU, FGV, UNOPAR, UAB, a nível de graduação e pós-graduação. Possui experiência em Gestão educacional onde já atuou como coordenador de graduação dos cursos de Sistemas de Informação, Redes de Computadores e Análise e Desenvolvimento de Sistemas, e Coordenador de Pós-graduação. Trabalha com gestão ágil de projetos, arquitetura da informação, gerência de projetos e ministra aulas há 24 anos. É membro do Núcleo de Excelência em Tecnologias Sociais (NEES - IC/UFAL), onde realizam-se pesquisas nos seguintes temas: Inteligência Artificial na Educação, Sistemas Tutores Inteligentes, Gamificação na Educação, Engenharia de Software e Ontologias, Política Públicas Educacionais.",
+            "showCard": true,
+            "image": "dalgoberto.jpeg"
+          },
+          {
+            "name": "Valber",
+            "role": "Economista, Professor e Especialista em Políticas Públicas e Inovação Institucional",
+            "bio": "Doutor em Economia pela Universidade Federal da Paraíba (UFPB), Mestre em Economia Aplicada e Bacharel em Economia pela Universidade Federal de Alagoas (UFAL) e em Direito pelo CESMAC. Atuou como advogado entre 2010 e 2014 nas áreas Cível, Administrativa e Tributária (OAB/AL 9788). Com ampla experiência em pesquisa aplicada, formulação de políticas públicas e inovação no setor público, Valber atua como professor universitário e analista judiciário, unindo prática profissional e rigor acadêmico. Suas principais competências incluem análise de dados para avaliação de políticas, modelagem econométrica, métodos quantitativos e elaboração de pareceres técnicos, com uma visão interdisciplinar entre Direito e Economia.",
+            "showCard": true,
+            "image": "valber.jpeg"
           }
         ]
       },
