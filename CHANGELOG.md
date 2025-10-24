@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/SrBlecaute01/sisweek/compare/v1.6.0...v1.7.0) (2025-10-24)
+
+
+### Features
+
+* add new guests ([8b05919](https://github.com/SrBlecaute01/sisweek/commit/8b05919b2eaad4a4097db67c60d50b4824e18ae5))
+
 ## [1.6.0](https://github.com/SrBlecaute01/sisweek/compare/v1.5.0...v1.6.0) (2025-10-22)
 
 
