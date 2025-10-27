@@ -6,36 +6,47 @@ import {useState} from "react";
 import {FiMenu} from "react-icons/fi";
 import {IoMdClose} from "react-icons/io";
 import {getNavbarHeight} from "../../utils";
+import {NavLink} from "react-router-dom";
+import {useAuth} from "../../hooks";
 
 const links = [
   {
     to: "about",
     text: "SOBRE",
-    onlyMobile: false
+    onlyMobile: false,
+    hideOnAuth: false
   },
   {
     to: "schedule",
     text: "PROGRAMAÇÃO",
-    onlyMobile: false
+    onlyMobile: false,
+    hideOnAuth: false
   },
   {
     to: "maps",
     text: "MAPA",
-    onlyMobile: true
+    onlyMobile: true,
+    hideOnAuth: false
   },
   {
     to: "sponsors",
     text: "PATROCINADORES",
-    onlyMobile: true
+    onlyMobile: true,
+    hideOnAuth: false
   },
   {
     to: "registration",
     text: "INSCREVA-SE",
-    onlyMobile: false
+    onlyMobile: false,
+    hideOnAuth: true
   }
 ]
 
 function Navbar() {
+  const {authenticated} = useAuth();
+  
+  //console.log(authenticated)
+
   const [isOpen, setOpen] = useState(false);
   const [isClosing, setClosing] = useState(false);
 
@@ -61,19 +72,30 @@ function Navbar() {
                 </div>
             )}
             {links
-                .filter(item => isOpen || !item.onlyMobile)
+                .filter(item => isOpen || !item.onlyMobile && !(item.hideOnAuth && authenticated))
                 .map(item => (
                     <Link
-                        to={item.to}
+                        to='http://app.sisweek.com.br'
                         smooth={true}
                         duration={500}
                         className={styles.route}
                         offset={-getNavbarHeight()}
-                        onClick={() => isOpen && toggleMenu()}
                     >
                       {item.text}
                     </Link>
                 ))}
+            {authenticated && (
+              <NavLink
+                to={'http://app.sisweek.com.br'}
+                className={styles.route}
+                style={() => ({
+                  color:"inherit",
+                  textDecoration: "inherit"
+                })}
+              >
+                IR PARA ATIVIDADES
+              </NavLink>
+            )}
           </div>
 
           {!isOpen && (<FiMenu className={styles.menuIcon} onClick={toggleMenu}/>)}
