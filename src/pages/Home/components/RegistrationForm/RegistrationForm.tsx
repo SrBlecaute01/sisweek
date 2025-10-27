@@ -10,6 +10,7 @@ import {createToast, formatCPF, scrollTo} from "../../../../utils";
 import {useAuth} from "../../../../hooks";
 import { FaRegCheckCircle } from "react-icons/fa";
 import {useState} from "react";
+import { NavLink } from 'react-router-dom';
 
 function RegistrationForm() {
   const { user, authenticated, register: registerUser, logout } = useAuth();
@@ -95,11 +96,23 @@ function RegistrationForm() {
                   Eles serão necessários para fazer login e participar
                   das atividades durante o evento.
                 </p>
+                <NavLink
+                  to={'http://app.sisweek.com.br'}
+                  className={styles.formLogin}
+                  onClick={(e)=>{
+                    e.preventDefault()
+                    logout()
+                    console.log('teste')
+                    window.location.href = 'http://app.sisweek.com.br'
+                  }}
+                >
+                  Clique aqui para se inscrever nas atividades<br/>(será necessário logar de novo)
+                </NavLink>
                 <p className={styles.formLogout} onClick={() => {
                   logout()
                   scrollTo('registration')
                 }}>
-                  Clique aqui para realizar outra inscrição
+                  Ou clique aqui para realizar outra inscrição
                 </p>
               </>
           ) : (
@@ -110,6 +123,12 @@ function RegistrationForm() {
                 </div>
 
                 <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} noValidate>
+                  <NavLink
+                    to={'http://app.sisweek.com.br'}
+                    className={styles.formLogin}
+                  >
+                    Já está inscrito? Então entre e confira!
+                  </NavLink>
                   <div className={styles.formField}>
                     <label htmlFor="name">Nome</label>
                     <input

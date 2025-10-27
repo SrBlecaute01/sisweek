@@ -21,6 +21,14 @@
     gap: 50px;
 }
 
+.formLogin{
+    color: #84b5ff;
+    text-align: center;
+}
+.formLogin:hover{
+    color: var(--secundary-blue);
+}
+
 .formTitle {
     width: 100%;
     text-align: center;
