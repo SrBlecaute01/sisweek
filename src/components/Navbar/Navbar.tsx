@@ -83,18 +83,16 @@ function Navbar() {
                       {item.text}
                     </Link>
                 ))}
-            {isUserAuthed && (
-              <NavLink
-                to={'http://app.sisweek.com.br'}
-                className={styles.route}
-                style={() => ({
-                  color:"inherit",
-                  textDecoration: "inherit"
-                })}
-              >
-                VER ATIVIDADES
-              </NavLink>
-            )}
+            <NavLink
+              to={'http://app.sisweek.com.br'}
+              className={styles.route}
+              style={() => ({
+                color:"inherit",
+                textDecoration: "inherit"
+              })}
+            >
+              PARTICIPAR
+            </NavLink>
           </div>
 
           {!isOpen && (<FiMenu className={styles.menuIcon} onClick={toggleMenu}/>)}
