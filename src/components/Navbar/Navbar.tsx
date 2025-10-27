@@ -75,7 +75,7 @@ function Navbar() {
                 .filter(item => isOpen || !item.onlyMobile && !(item.hideOnAuth && authenticated))
                 .map(item => (
                     <Link
-                        to='http://app.sisweek.com.br'
+                        to={item.to}
                         smooth={true}
                         duration={500}
                         className={styles.route}
