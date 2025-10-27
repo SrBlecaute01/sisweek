@@ -12,7 +12,7 @@ export const registrationSchema = z.object({
       .max(16, "Não pode possuir mais de 16 caracteres."),
   confirmPassword: z.string().min(1, 'É necessário confirmar a senha.'),
 }).refine((data) => data.password === data.confirmPassword, {
-  message: 'As senhas mão correspondem.',
+  message: 'As senhas não correspondem.',
   path: ['confirmPassword'],
 });
 
