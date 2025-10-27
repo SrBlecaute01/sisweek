@@ -44,8 +44,7 @@ const links = [
 
 function Navbar() {
   const {authenticated} = useAuth();
-  
-  //console.log(authenticated)
+  const isUserAuthed = authenticated;
 
   const [isOpen, setOpen] = useState(false);
   const [isClosing, setClosing] = useState(false);
@@ -72,7 +71,7 @@ function Navbar() {
                 </div>
             )}
             {links
-                .filter(item => isOpen || !item.onlyMobile && !(item.hideOnAuth && authenticated))
+                .filter(item => isOpen || !item.onlyMobile && !(item.hideOnAuth && isUserAuthed))
                 .map(item => (
                     <Link
                         to={item.to}
@@ -84,7 +83,7 @@ function Navbar() {
                       {item.text}
                     </Link>
                 ))}
-            {authenticated && (
+            {isUserAuthed && (
               <NavLink
                 to={'http://app.sisweek.com.br'}
                 className={styles.route}
@@ -93,7 +92,7 @@ function Navbar() {
                   textDecoration: "inherit"
                 })}
               >
-                IR PARA ATIVIDADES
+                VER ATIVIDADES
               </NavLink>
             )}
           </div>
