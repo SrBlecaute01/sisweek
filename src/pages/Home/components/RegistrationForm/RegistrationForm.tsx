@@ -12,6 +12,8 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import {useState} from "react";
 import { NavLink } from 'react-router-dom';
 
+const appUrl = import.meta.env.VITE_APP_URL;
+
 function RegistrationForm() {
   const { user, authenticated, register: registerUser, logout } = useAuth();
   const {
@@ -90,30 +92,22 @@ function RegistrationForm() {
                   <h1>OBRIGADO, {user?.name?.split(" ")[0]?.toUpperCase()}!</h1>
                   <h1>PELA SUA INSCRIÇÃO</h1>
                 </div>
-                <FaRegCheckCircle className={styles.formCheckmarkIcon}/>
-                <p className={styles.formRegisteredDescription}>
-                  Guarde seus dados de acesso em um local seguro.
-                  Eles serão necessários para fazer login e participar
-                  das atividades durante o evento.
-                </p>
-                <NavLink
-                  to={'http://app.sisweek.com.br'}
-                  className={styles.formLogin}
-                  onClick={(e)=>{
-                    e.preventDefault()
+                <div className={styles.formRegisteredContainer}>
+                  <FaRegCheckCircle className={styles.formCheckmarkIcon}/>
+                  <p className={styles.formRegisteredDescription}>
+                    Durante o evento, acesse a Área do Participante para
+                    consultar a programação e marcar sua presença nas atividades.
+                  </p>
+                  <a href={appUrl} className={styles.formButton}>
+                    ÁREA DO PARTICIPANTE
+                  </a>
+                  <p className={styles.formLogout} onClick={() => {
                     logout()
-                    console.log('teste')
-                    window.location.href = 'http://app.sisweek.com.br'
-                  }}
-                >
-                  Clique aqui para se inscrever nas atividades<br/>(será necessário logar de novo)
-                </NavLink>
-                <p className={styles.formLogout} onClick={() => {
-                  logout()
-                  scrollTo('registration')
-                }}>
-                  Ou clique aqui para realizar outra inscrição
-                </p>
+                    scrollTo('registration')
+                  }}>
+                    Clique aqui para realizar outra inscrição
+                  </p>
+                </div>
               </>
           ) : (
               <>

@@ -121,6 +121,9 @@
     transition: opacity 0.3s ease;
     background: var(--secundary-blue);
 
+    text-align: center;
+    text-decoration: none;
+
     &:hover:not(:disabled) {
         opacity: 0.9;
     }
@@ -130,6 +133,15 @@
         cursor: not-allowed;
         opacity: 0.7;
     }
+}
+
+.formRegisteredContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 20px
 }
 
 .formCheckmarkIcon {
@@ -148,7 +160,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
-    text-align: justify;
+    text-align: center;
     padding: 0;
     margin: 0;
 }
@@ -157,6 +169,7 @@
     color: #8e8c8c;
     cursor: pointer;
     font-size: 14px;
+    margin-top: -10px;
 
     &:hover {
         color: var(--secundary-blue);
