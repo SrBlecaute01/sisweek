@@ -99,7 +99,7 @@ function RegistrationForm() {
                     consultar a programação e marcar sua presença nas atividades.
                   </p>
                   <NavLink
-                      href={appUrl}
+                      to={appUrl}
                       className={styles.formButton}>
                     ÁREA DO PARTICIPANTE
                   </NavLink>
