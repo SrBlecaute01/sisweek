@@ -21,12 +21,16 @@
     gap: 50px;
 }
 
-.formLogin{
+.formLogin {
+    margin-top: 20px;
+
     color: #84b5ff;
     text-align: center;
-}
-.formLogin:hover{
-    color: var(--secundary-blue);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--secundary-blue);
+    }
 }
 
 .formTitle {
@@ -210,5 +214,10 @@
     .formButton {
         margin-top: 0;
         padding: 10px;
+    }
+
+    .formLogin {
+        margin-top: 10px;
+        font-size: 13px;
     }
 }

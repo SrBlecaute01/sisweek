@@ -98,9 +98,11 @@ function RegistrationForm() {
                     Durante o evento, acesse a Área do Participante para
                     consultar a programação e marcar sua presença nas atividades.
                   </p>
-                  <a href={appUrl} className={styles.formButton}>
+                  <NavLink
+                      href={appUrl}
+                      className={styles.formButton}>
                     ÁREA DO PARTICIPANTE
-                  </a>
+                  </NavLink>
                   <p className={styles.formLogout} onClick={() => {
                     logout()
                     scrollTo('registration')
@@ -117,12 +119,6 @@ function RegistrationForm() {
                 </div>
 
                 <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} noValidate>
-                  <NavLink
-                    to={'http://app.sisweek.com.br'}
-                    className={styles.formLogin}
-                  >
-                    Já está inscrito? Então entre e confira!
-                  </NavLink>
                   <div className={styles.formField}>
                     <label htmlFor="name">Nome</label>
                     <input
@@ -192,6 +188,12 @@ function RegistrationForm() {
                       disabled={!isValid || isSubmitting}>
                     {isSubmitting ? 'Enviando Inscrição...' : 'Inscrever-se'}
                   </button>
+
+                  <NavLink
+                      to={appUrl}
+                      className={styles.formLogin}>
+                    Já está inscrito? Então entre e confira!
+                  </NavLink>
                 </form>
               </>
           )}
