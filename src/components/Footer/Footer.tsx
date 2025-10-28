@@ -15,7 +15,7 @@ export default function Footer(){
           <p className={styles.foot_social}>Rede social:</p>
           <a 
             className={styles.foot_instagram}
-            href="https://www.instagram.com/sisweek_ufal_penedo/"
+            href="https://www.instagram.com/sisweek.ufal/"
             target="_blank"
             rel="noopener noreferrer">
             <FaInstagram className={styles.foot_instagram}/>
