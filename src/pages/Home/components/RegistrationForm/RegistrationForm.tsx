@@ -10,9 +10,9 @@ import {createToast, formatCPF, scrollTo} from "../../../../utils";
 import {useAuth} from "../../../../hooks";
 import { FaRegCheckCircle } from "react-icons/fa";
 import {useState} from "react";
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
-const appUrl = import.meta.env.VITE_APP_URL;
+const APP_URL = import.meta.env.VITE_APP_URL;
 
 function RegistrationForm() {
   const { user, authenticated, register: registerUser, logout } = useAuth();
@@ -99,7 +99,7 @@ function RegistrationForm() {
                     consultar a programação e marcar sua presença nas atividades.
                   </p>
                   <NavLink
-                      to={appUrl}
+                      to={APP_URL}
                       className={styles.formButton}>
                     ÁREA DO PARTICIPANTE
                   </NavLink>
@@ -190,7 +190,7 @@ function RegistrationForm() {
                   </button>
 
                   <NavLink
-                      to={appUrl}
+                      to={APP_URL}
                       className={styles.formLogin}>
                     Já está inscrito? Então entre e confira!
                   </NavLink>

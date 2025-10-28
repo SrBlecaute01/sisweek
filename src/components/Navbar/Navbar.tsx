@@ -9,58 +9,57 @@ import {getNavbarHeight} from "../../utils";
 import {useAuth} from "../../hooks";
 import {NavLink} from "react-router-dom";
 
-const appUrl = import.meta.env.VITE_APP_URL;
-const links = [
-  {
-    to: "about",
-    text: "SOBRE",
-    onlyMobile: false,
-    onlyAuthenticated: false,
-    hideOnAuth: false
-  },
-  {
-    to: "schedule",
-    text: "PROGRAMAÇÃO",
-    onlyMobile: false,
-    onlyAuthenticated: false,
-    hideOnAuth: false
-  },
-  {
-    to: "maps",
-    text: "MAPA",
-    onlyMobile: true,
-    onlyAuthenticated: false,
-    hideOnAuth: false
-  },
-  {
-    to: "sponsors",
-    text: "PATROCINADORES",
-    onlyMobile: true,
-    onlyAuthenticated: false,
-    hideOnAuth: false
-  },
-  {
-    to: "registration",
-    text: "INSCREVA-SE",
-    onlyMobile: false,
-    onlyAuthenticated: false,
-    hideOnAuth: true
-  },
-  {
-    to: appUrl,
-    text: "ÁREA DO PARTICIPANTE",
-    onlyMobile: false,
-    onlyAuthenticated: true,
-    hideOnAuth: false
-  }
-]
+const APP_URL = import.meta.env.VITE_APP_URL;
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const [isClosing, setClosing] = useState(false);
   const {authenticated} = useAuth();
 
-  console.log(appUrl)
+  const links = [
+    {
+      to: "about",
+      text: "SOBRE",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "schedule",
+      text: "PROGRAMAÇÃO",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "maps",
+      text: "MAPA",
+      onlyMobile: true,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "sponsors",
+      text: "PATROCINADORES",
+      onlyMobile: true,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "registration",
+      text: "INSCREVA-SE",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: true
+    },
+    {
+      to: APP_URL,
+      text: "ÁREA DO PARTICIPANTE",
+      onlyMobile: false,
+      onlyAuthenticated: true,
+      hideOnAuth: false
+    }
+  ]
 
   const toggleMenu = () => {
     if (isOpen) {
