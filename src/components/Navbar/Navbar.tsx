@@ -79,7 +79,7 @@ function Navbar() {
           {!isOpen && (<FiMenu className={styles.menuIcon} onClick={toggleMenu}/>)}
 
           <a
-              href="https://www.instagram.com/sisweek_ufal_penedo/"
+              href="https://www.instagram.com/sisweek.ufal/"
               target="_blank"
               rel="noopener noreferrer">
             <FaInstagram className={styles.icon}/>
