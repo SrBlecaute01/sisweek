@@ -10,6 +10,9 @@ import {createToast, formatCPF, scrollTo} from "../../../../utils";
 import {useAuth} from "../../../../hooks";
 import { FaRegCheckCircle } from "react-icons/fa";
 import {useState} from "react";
+import {NavLink} from 'react-router-dom';
+
+const APP_URL = import.meta.env.VITE_APP_URL;
 
 function RegistrationForm() {
   const { user, authenticated, register: registerUser, logout } = useAuth();
@@ -89,18 +92,24 @@ function RegistrationForm() {
                   <h1>OBRIGADO, {user?.name?.split(" ")[0]?.toUpperCase()}!</h1>
                   <h1>PELA SUA INSCRIÇÃO</h1>
                 </div>
-                <FaRegCheckCircle className={styles.formCheckmarkIcon}/>
-                <p className={styles.formRegisteredDescription}>
-                  Guarde seus dados de acesso em um local seguro.
-                  Eles serão necessários para fazer login e participar
-                  das atividades durante o evento.
-                </p>
-                <p className={styles.formLogout} onClick={() => {
-                  logout()
-                  scrollTo('registration')
-                }}>
-                  Clique aqui para realizar outra inscrição
-                </p>
+                <div className={styles.formRegisteredContainer}>
+                  <FaRegCheckCircle className={styles.formCheckmarkIcon}/>
+                  <p className={styles.formRegisteredDescription}>
+                    Durante o evento, acesse a Área do Participante para
+                    consultar a programação e marcar sua presença nas atividades.
+                  </p>
+                  <NavLink
+                      to={APP_URL}
+                      className={styles.formButton}>
+                    ÁREA DO PARTICIPANTE
+                  </NavLink>
+                  <p className={styles.formLogout} onClick={() => {
+                    logout()
+                    scrollTo('registration')
+                  }}>
+                    Clique aqui para realizar outra inscrição
+                  </p>
+                </div>
               </>
           ) : (
               <>
@@ -179,6 +188,12 @@ function RegistrationForm() {
                       disabled={!isValid || isSubmitting}>
                     {isSubmitting ? 'Enviando Inscrição...' : 'Inscrever-se'}
                   </button>
+
+                  <NavLink
+                      to={APP_URL}
+                      className={styles.formLogin}>
+                    Já está inscrito? Então entre e confira!
+                  </NavLink>
                 </form>
               </>
           )}

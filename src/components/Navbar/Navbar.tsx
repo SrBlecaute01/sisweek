@@ -6,38 +6,60 @@ import {useState} from "react";
 import {FiMenu} from "react-icons/fi";
 import {IoMdClose} from "react-icons/io";
 import {getNavbarHeight} from "../../utils";
+import {useAuth} from "../../hooks";
+import {NavLink} from "react-router-dom";
 
-const links = [
-  {
-    to: "about",
-    text: "SOBRE",
-    onlyMobile: false
-  },
-  {
-    to: "schedule",
-    text: "PROGRAMAÇÃO",
-    onlyMobile: false
-  },
-  {
-    to: "maps",
-    text: "MAPA",
-    onlyMobile: true
-  },
-  {
-    to: "sponsors",
-    text: "PATROCINADORES",
-    onlyMobile: true
-  },
-  {
-    to: "registration",
-    text: "INSCREVA-SE",
-    onlyMobile: false
-  }
-]
+const APP_URL = import.meta.env.VITE_APP_URL;
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const [isClosing, setClosing] = useState(false);
+  const {authenticated} = useAuth();
+
+  const links = [
+    {
+      to: "about",
+      text: "SOBRE",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "schedule",
+      text: "PROGRAMAÇÃO",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "maps",
+      text: "MAPA",
+      onlyMobile: true,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "sponsors",
+      text: "PATROCINADORES",
+      onlyMobile: true,
+      onlyAuthenticated: false,
+      hideOnAuth: false
+    },
+    {
+      to: "registration",
+      text: "INSCREVA-SE",
+      onlyMobile: false,
+      onlyAuthenticated: false,
+      hideOnAuth: true
+    },
+    {
+      to: APP_URL,
+      text: "ÁREA DO PARTICIPANTE",
+      onlyMobile: false,
+      onlyAuthenticated: true,
+      hideOnAuth: false
+    }
+  ]
 
   const toggleMenu = () => {
     if (isOpen) {
@@ -61,23 +83,37 @@ function Navbar() {
                 </div>
             )}
             {links
-                .filter(item => isOpen || !item.onlyMobile)
-                .map(item => (
-                    <Link
-                        to={item.to}
-                        smooth={true}
-                        duration={500}
-                        className={styles.route}
-                        offset={-getNavbarHeight()}
-                        onClick={() => isOpen && toggleMenu()}
-                    >
-                      {item.text}
-                    </Link>
-                ))}
+                .filter(item => {
+                  if (authenticated && item.hideOnAuth) return false;
+                  if (!authenticated && item.onlyAuthenticated) return false;
+                  return isOpen || !item.onlyMobile;
+                })
+                .map(item => item.to.startsWith("http")
+                    ? (
+                        <NavLink
+                            to={item.to}
+                            className={styles.route}
+                            style={{
+                              color:"inherit",
+                              textDecoration: "inherit"
+                        }}
+                        >
+                          {item.text}
+                        </NavLink >
+                    ) : (
+                        <Link
+                            to={item.to}
+                            smooth={true}
+                            duration={500}
+                            className={styles.route}
+                            offset={-getNavbarHeight()}
+                        >
+                          {item.text}
+                        </Link>
+                    ))}
           </div>
 
           {!isOpen && (<FiMenu className={styles.menuIcon} onClick={toggleMenu}/>)}
-
           <a
               href="https://www.instagram.com/sisweek_ufal_penedo/"
               target="_blank"

@@ -148,12 +148,17 @@
                 transition: none !important;
             }
         }
+
     }
 
     .route {
         width: 100%;
         height: 50px;
         padding-left: 20px;
+        
+        color: inherit;
+        cursor: inherit;
+        text-decoration: inherit;
 
         :first-child {
             display: flex;
