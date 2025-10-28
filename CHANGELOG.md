@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.8.0](https://github.com/SrBlecaute01/sisweek/compare/v1.7.0...v1.8.0) (2025-10-28)
+
+
+### Features
+
+* added App links ([#24](https://github.com/SrBlecaute01/sisweek/issues/24)) ([4f450cb](https://github.com/SrBlecaute01/sisweek/commit/4f450cbff17b041e6e8b71f72c6fa8884dbdc935))
+
+
+### Bug Fixes
+
+* instagram url ([#25](https://github.com/SrBlecaute01/sisweek/issues/25)) ([63495d6](https://github.com/SrBlecaute01/sisweek/commit/63495d6ab74679a0afc35e5002904a815db0f63b))
+
 ## [1.7.0](https://github.com/SrBlecaute01/sisweek/compare/v1.6.0...v1.7.0) (2025-10-24)
 
 
